@@ -1,8 +1,13 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
+
+  const isActive = (path) => {
+    return location.pathname === path
+  }
 
   return (
     <nav className="bg-white shadow-md">
@@ -11,19 +16,91 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <span className="text-2xl font-bold text-green-600">WAStec</span>
-              <span className="ml-2 text-sm text-gray-600 hidden md:block">Kukreja's Bio-Gas Pvt. Ltd.</span>
+              {/* <span className="ml-2 text-sm text-gray-600 hidden md:block">Kukreja's Bio-Gas Pvt. Ltd.</span> */}
             </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-            <Link to="/about" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">About Us</Link>
-            <Link to="/projects" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Projects</Link>
-            <Link to="/technology" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Technology</Link>
-            <Link to="/impact" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Impact</Link>
-            <Link to="/news" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">News</Link>
-            <Link to="/careers" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Careers</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
+            <Link 
+              to="/" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/about" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/about') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              About Us
+            </Link>
+            <Link 
+              to="/projects" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/projects') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Projects
+            </Link>
+            <Link 
+              to="/technology" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/technology') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Technology
+            </Link>
+            <Link 
+              to="/impact" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/impact') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Impact
+            </Link>
+            <Link 
+              to="/news" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/news') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              News
+            </Link>
+            <Link 
+              to="/careers" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/careers') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Careers
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/contact') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Contact
+            </Link>
           </div>
           
           <div className="md:hidden flex items-center">
@@ -46,14 +123,86 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Home</Link>
-            <Link to="/about" className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">About Us</Link>
-            <Link to="/projects" className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Projects</Link>
-            <Link to="/technology" className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Technology</Link>
-            <Link to="/impact" className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Impact</Link>
-            <Link to="/news" className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">News</Link>
-            <Link to="/careers" className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Careers</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-green-600 block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+            <Link 
+              to="/" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/about" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/about') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              About Us
+            </Link>
+            <Link 
+              to="/projects" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/projects') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Projects
+            </Link>
+            <Link 
+              to="/technology" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/technology') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Technology
+            </Link>
+            <Link 
+              to="/impact" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/impact') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Impact
+            </Link>
+            <Link 
+              to="/news" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/news') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              News
+            </Link>
+            <Link 
+              to="/careers" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/careers') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Careers
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/contact') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Contact
+            </Link>
           </div>
         </div>
       )}

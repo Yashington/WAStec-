@@ -43,7 +43,7 @@ const Home = () => {
                   to="/contact"
                   className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"
                 >
-                  Get a Quote
+                 Contact Us
                 </Link>
                 <Link
                   to="/about"
@@ -151,13 +151,13 @@ const Home = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-green-600 to-blue-600">
+      <div className="">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+            <h2 className="text-3xl font-extrabold  sm:text-4xl">
               Ready to Transform Your Waste?
             </h2>
-            <p className="mt-4 text-lg text-green-100">
+            <p className="mt-4 text-lg ">
               Join us in building a sustainable future with clean energy solutions.
             </p>
             <div className="mt-10 flex justify-center space-x-4">
@@ -169,13 +169,13 @@ const Home = () => {
               </Link>
               <Link
                 to="/projects"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-700 hover:bg-green-800"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-800 hover:bg-green-900"
               >
                 Explore Projects
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-green-700"
+                className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md bg-transparent text-green-600 hover:bg-green-50 "
               >
                 Partner With Us
               </Link>
