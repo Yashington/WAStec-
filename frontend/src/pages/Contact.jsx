@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { submitContactForm } from '../services/api'
+import GoogleMap from '../components/GoogleMap'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,24 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
   const [submitError, setSubmitError] = useState('')
+  const [isMapLoaded, setIsMapLoaded] = useState(false)
+
+  // Load Google Maps script
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${import.meta.env.VITE_APP_GOOGLE_MAPS_API_KEY}&libraries=places`
+    script.async = true
+    script.defer = true
+    script.onload = () => setIsMapLoaded(true)
+    script.onerror = () => console.error('Failed to load Google Maps script')
+    document.head.appendChild(script)
+
+    return () => {
+      if (document.head.contains(script)) {
+        document.head.removeChild(script)
+      }
+    }
+  }, [])
 
   const handleChange = (e) => {
     setFormData({
@@ -45,6 +64,12 @@ const Contact = () => {
     } finally {
       setIsSubmitting(false)
     }
+  }
+
+  // Coordinates for AIC-BARC, Mumbai
+  const mapCenter = {
+    lat: 19.076090, // Mumbai latitude
+    lng: 72.877426  // Mumbai longitude
   }
 
   return (
@@ -81,8 +106,9 @@ const Contact = () => {
                 </svg>
               </div>
               <h3 className="mt-4 text-lg font-bold text-gray-900">Phone</h3>
-              <p className="mt-2 text-gray-600">+91-XXXXXXXXXX</p>
+              <p className="mt-2 text-gray-600">+91-9876543210</p>
               <p className="mt-1 text-gray-600">Mon-Fri from 9AM to 6PM</p>
+              <p className="mt-1 text-gray-600">+91-9876543211 (Support)</p>
             </div>
 
             <div className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-md border border-blue-100">
@@ -94,6 +120,9 @@ const Contact = () => {
               <h3 className="mt-4 text-lg font-bold text-gray-900">Email</h3>
               <p className="mt-2 text-gray-600">contact@wastec.in</p>
               <p className="mt-1 text-gray-600">General inquiries</p>
+              <p className="mt-1 text-gray-600">careers@wastec.in</p>
+              <p className="mt-1 text-gray-600">partnerships@wastec.in</p>
+              <p className="mt-1 text-gray-600">support@wastec.in</p>
             </div>
 
             <div className="bg-gradient-to-br from-white to-green-50 p-6 rounded-xl shadow-md border border-green-100">
@@ -105,9 +134,11 @@ const Contact = () => {
               </div>
               <h3 className="mt-4 text-lg font-bold text-gray-900">Office</h3>
               <address className="mt-2 text-gray-600 not-italic">
-                AIC-BARC, 1st Flr, DAE Con,<br />
-                Anushaktinagar, Mumbai, 400094
+                AIC-BARC, 1st Floor, DAE Convention Centre,<br />
+                Anushaktinagar, Mumbai, Maharashtra 400094<br />
+                India
               </address>
+              <p className="mt-2 text-gray-600">Near Trombay Railway Station</p>
             </div>
           </div>
         </div>
@@ -118,14 +149,14 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-xl shadow-md">
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900">Send us a message</h2>
               <p className="mt-2 text-gray-600">
                 Have questions about our technology or services? Fill out the form below and we'll get back to you as soon as possible.
               </p>
 
               {submitSuccess && (
-                <div className="mt-4 p-4 bg-green-50 rounded-md">
+                <div className="mt-6 p-4 bg-green-50 rounded-lg border border-green-200">
                   <div className="flex">
                     <div className="flex-shrink-0">
                       <svg className="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
@@ -142,7 +173,7 @@ const Contact = () => {
               )}
 
               {submitError && (
-                <div className="mt-4 p-4 bg-red-50 rounded-md">
+                <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
                   <div className="flex">
                     <div className="flex-shrink-0">
                       <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
@@ -172,7 +203,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
                       />
                     </div>
                   </div>
@@ -188,7 +219,7 @@ const Contact = () => {
                         id="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
                       />
                     </div>
                   </div>
@@ -205,7 +236,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
                       />
                     </div>
                   </div>
@@ -221,7 +252,7 @@ const Contact = () => {
                         id="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
                       />
                     </div>
                   </div>
@@ -238,7 +269,7 @@ const Contact = () => {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
                       />
                     </div>
                   </div>
@@ -255,7 +286,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
+                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
                       />
                     </div>
                   </div>
@@ -265,9 +296,17 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`ml-3 inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    className={`ml-3 inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150 ease-in-out ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : 'Send Message'}
                   </button>
                 </div>
               </form>
@@ -280,8 +319,21 @@ const Contact = () => {
                 Visit our office at the Advanced Innovation Centre of Bhabha Atomic Research Centre.
               </p>
 
-              <div className="mt-8 bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
-                <span className="text-gray-500">Google Maps Integration</span>
+              <div className="mt-8 rounded-xl overflow-hidden shadow-lg border border-gray-200" style={{ height: '384px' }}>
+                {isMapLoaded ? (
+                  <GoogleMap center={mapCenter} zoom={15} />
+                ) : (
+                  <div className="w-full h-full bg-gray-200 border-2 border-dashed rounded-xl flex items-center justify-center">
+                    <div className="text-center">
+                      <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <h3 className="mt-2 text-lg font-medium text-gray-900">Loading Map...</h3>
+                      <p className="mt-1 text-sm text-gray-500">Please wait while we load Google Maps</p>
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="mt-8">
