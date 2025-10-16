@@ -37,6 +37,14 @@ const Impact = () => {
     { id: 4, name: 'Trees Equivalent', value: '12,000', unit: '', description: 'Equivalent to planting new trees' }
   ]
 
+  // Additional impact metrics
+  const additionalMetrics = [
+    { id: 1, name: 'Households Powered', value: '8,500', description: 'Annual electricity needs met' },
+    { id: 2, name: 'Vehicles Off Road', value: '150', description: 'Equivalent cars taken off road' },
+    { id: 3, name: 'Landfill Waste', value: '2,800', unit: 'tons', description: 'Waste diverted from landfills' },
+    { id: 4, name: 'Jobs Created', value: '120', description: 'Direct and indirect employment' }
+  ]
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -160,18 +168,70 @@ const Impact = () => {
 
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {impactStats.map((stat) => (
-              <div key={stat.id} className="bg-white p-6 rounded-xl shadow-md text-center">
+              <div key={stat.id} className="bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
                 <div className="text-3xl font-extrabold text-green-600">{stat.value}{stat.unit && <span className="text-xl"> {stat.unit}</span>}</div>
                 <h3 className="mt-2 text-lg font-medium text-gray-900">{stat.name}</h3>
                 <p className="mt-1 text-sm text-gray-500">{stat.description}</p>
               </div>
             ))}
           </div>
+
+          {/* Additional Metrics */}
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {additionalMetrics.map((metric) => (
+              <div key={metric.id} className="bg-gradient-to-br from-white to-green-50 p-6 rounded-xl shadow-md text-center border border-green-100">
+                <div className="text-3xl font-extrabold text-green-600">{metric.value}{metric.unit && <span className="text-xl"> {metric.unit}</span>}</div>
+                <h3 className="mt-2 text-lg font-medium text-gray-900">{metric.name}</h3>
+                <p className="mt-1 text-sm text-gray-500">{metric.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Impact Visualization */}
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center">
+            <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">Impact Visualization</h2>
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              Environmental Benefits Over Time
+            </p>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+              Tracking our progress in waste management and clean energy generation
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Waste Diverted Chart */}
+            <div className="bg-gradient-to-br from-white to-green-50 p-6 rounded-xl shadow-md border border-green-100">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Waste Diverted from Landfills (Tons)</h3>
+              <div className="bg-gray-100 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center">
+                <span className="text-gray-500">Waste Diverted Chart Visualization</span>
+              </div>
+              <div className="mt-4 flex justify-between text-sm text-gray-500">
+                <span>5 year trend</span>
+                <span className="text-green-600 font-medium">↑ 25% annual growth</span>
+              </div>
+            </div>
+
+            {/* CO2 Savings Chart */}
+            <div className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-md border border-blue-100">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">CO2 Emissions Avoided (Tons)</h3>
+              <div className="bg-gray-100 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center">
+                <span className="text-gray-500">CO2 Savings Chart Visualization</span>
+              </div>
+              <div className="mt-4 flex justify-between text-sm text-gray-500">
+                <span>5 year trend</span>
+                <span className="text-blue-600 font-medium">↑ 30% annual growth</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* SDG Alignment */}
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
             <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">Global Goals</h2>

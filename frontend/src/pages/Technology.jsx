@@ -77,6 +77,69 @@ const Technology = () => {
         </div>
       </div>
 
+      {/* Niasarguna Highlight Section */}
+      <div className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center">
+            <h2 className="text-base font-semibold tracking-wide uppercase text-green-200">Technology Spotlight</h2>
+            <p className="mt-2 text-3xl leading-8 font-extrabold text-white sm:text-4xl">
+              Nisargruna Biphasic Biomethanation
+            </p>
+            <p className="mt-4 max-w-2xl text-xl text-green-100 lg:mx-auto">
+              The foundation of our waste-to-energy innovation
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-white">BARC's Revolutionary Technology</h3>
+              <p className="mt-4 text-lg text-green-100">
+                The Nisargruna technology, developed by Bhabha Atomic Research Centre, represents a breakthrough in biogas production. This patented biphasic biomethanation process combines aerobic and anaerobic digestion to maximize biogas yield from organic waste.
+              </p>
+              <p className="mt-4 text-lg text-green-100">
+                Unlike conventional single-stage anaerobic digestion, the Nisargruna process first uses aerobic digestion to break down complex organic matter, making it more accessible for methanogenic bacteria in the subsequent anaerobic stage.
+              </p>
+              
+              <div className="mt-8 p-6 bg-white bg-opacity-10 rounded-lg border border-green-200">
+                <h4 className="text-lg font-bold text-white">Key Advantages of Nisargruna</h4>
+                <ul className="mt-4 space-y-2">
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-green-300 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-2 text-green-100">30-40% higher biogas yield compared to traditional methods</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-green-300 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-2 text-green-100">Faster processing time with reduced odor</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-green-300 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-2 text-green-100">Reduced pathogen content in final products</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="h-5 w-5 text-green-300 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-2 text-green-100">Better stabilization of organic waste</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="flex justify-center">
+              <div className="bg-white bg-opacity-20 border-2 border-dashed border-white rounded-xl w-full h-96 flex items-center justify-center">
+                <span className="text-white">Nisargruna Technology Visualization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Technology Overview */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
