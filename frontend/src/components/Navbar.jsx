@@ -52,6 +52,16 @@ const Navbar = () => {
               Projects
             </Link>
             <Link 
+              to="/products" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/products') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Products
+            </Link>
+            <Link 
               to="/technology" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/technology') 
@@ -60,6 +70,16 @@ const Navbar = () => {
               }`}
             >
               Technology
+            </Link>
+            <Link 
+              to="/services" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/services') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Services
             </Link>
             <Link 
               to="/impact" 
@@ -154,6 +174,16 @@ const Navbar = () => {
               Projects
             </Link>
             <Link 
+              to="/products" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/products') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Products
+            </Link>
+            <Link 
               to="/technology" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/technology') 
@@ -162,6 +192,16 @@ const Navbar = () => {
               }`}
             >
               Technology
+            </Link>
+            <Link 
+              to="/services" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/services') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Services
             </Link>
             <Link 
               to="/impact" 
