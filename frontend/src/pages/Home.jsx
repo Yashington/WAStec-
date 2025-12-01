@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import gem1 from "../images/home.png";
 
 const Home = () => {
   const [biogasOutput, setBiogasOutput] = useState(1250000)
@@ -49,24 +50,26 @@ const Home = () => {
                 BARC-incubated startup pioneering biogas purification and waste upcycling technologies for a sustainable future.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link
+                <a
                   to="/contact"
                   className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"
                 >
                  Contact Us
-                </Link>
-                <Link
+                </a>
+                <a
                   to="/about"
                   className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-green-700 bg-green-100 hover:bg-green-200 md:py-4 md:text-lg md:px-10"
                 >
                   Learn More
-                </Link>
+                </a>
               </div>
             </div>
             <div className="flex justify-center">
               <div className="relative w-full">
                 <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 sm:h-80 md:h-96 flex items-center justify-center">
-                  <span className="text-gray-500">Biogas Plant Visualization</span>
+
+                  <img src={gem1} alt="hbhby" className="w-full h-64 object-cover" />
+
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-white p-3 sm:p-4 rounded-lg shadow-lg">
                   <div className="text-center">
