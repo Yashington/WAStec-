@@ -1,9 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [location])
 
   const isActive = (path) => {
     return location.pathname === path
@@ -152,7 +157,6 @@ const Navbar = () => {
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
-              onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
@@ -163,7 +167,6 @@ const Navbar = () => {
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
-              onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </Link>
@@ -174,7 +177,6 @@ const Navbar = () => {
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
-              onClick={() => setIsMenuOpen(false)}
             >
               Projects
             </Link>
@@ -185,7 +187,6 @@ const Navbar = () => {
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
-              onClick={() => setIsMenuOpen(false)}
             >
               Products
             </Link>
@@ -196,7 +197,6 @@ const Navbar = () => {
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
-              onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
@@ -207,7 +207,6 @@ const Navbar = () => {
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
-              onClick={() => setIsMenuOpen(false)}
             >
               Technology
             </Link>
@@ -218,7 +217,6 @@ const Navbar = () => {
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
-              onClick={() => setIsMenuOpen(false)}
             >
               Impact
             </Link>
@@ -229,7 +227,6 @@ const Navbar = () => {
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
-              onClick={() => setIsMenuOpen(false)}
             >
               News
             </Link>
@@ -240,7 +237,6 @@ const Navbar = () => {
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
-              onClick={() => setIsMenuOpen(false)}
             >
               Careers
             </Link>
@@ -251,7 +247,6 @@ const Navbar = () => {
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
-              onClick={() => setIsMenuOpen(false)}
             >
               Contact
             </Link>
