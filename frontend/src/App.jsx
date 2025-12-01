@@ -35,7 +35,7 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col bg-white">
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow pt-16"> {/* Added pt-16 to account for navbar height */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

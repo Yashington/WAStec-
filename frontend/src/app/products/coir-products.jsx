@@ -20,7 +20,7 @@ export default function CoirProducts() {
 
       <div className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {items.map((it) => (
               <div key={it.title} className="bg-white rounded-xl shadow-md p-6 border hover:shadow-lg transition">
                 <div className="bg-green-50 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
