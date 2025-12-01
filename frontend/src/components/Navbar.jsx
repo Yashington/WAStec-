@@ -14,93 +14,94 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
+            <a href="/" className="flex-shrink-0 flex items-center">
               <img src="/logo.jpg" alt="WAStec Logo" className="h-14 w-auto" />
               {/* <span className="ml-2 text-sm text-gray-600 hidden md:block">Kukreja's Bio-Gas Pvt. Ltd.</span> */}
-            </Link>
+            </a>
           </div>
           
-          <div className="hidden md:flex items-center space-x-1 lg:space-x-8">
-            <Link 
-              to="/" 
-              className={`px-2 py-2 rounded-md text-sm font-medium ${
+          <div className="hidden md:flex items-center space-x-8">
+            <a 
+              href="/" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/') 
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
             >
               Home
-            </Link>
-            <Link 
-              to="/about" 
-              className={`px-2 py-2 rounded-md text-sm font-medium ${
+              </a>
+    
+            <a 
+              href="/about" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/about') 
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
             >
               About Us
-            </Link>
-            <Link 
-              to="/projects" 
-              className={`px-2 py-2 rounded-md text-sm font-medium ${
+            </a>
+            <a 
+              href="/projects" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/projects') 
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
             >
               Projects
-            </Link>
-            <Link 
-              to="/technology" 
-              className={`px-2 py-2 rounded-md text-sm font-medium ${
+            </a>
+            <a 
+              href="/technology" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/technology') 
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
             >
               Technology
-            </Link>
-            <Link 
-              to="/impact" 
-              className={`px-2 py-2 rounded-md text-sm font-medium ${
+            </a>
+            <a 
+              href="/impact" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/impact') 
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
             >
               Impact
-            </Link>
-            <Link 
-              to="/news" 
-              className={`px-2 py-2 rounded-md text-sm font-medium ${
+            </a>
+            <a 
+              href="/news" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/news') 
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
             >
               News
-            </Link>
-            <Link 
-              to="/careers" 
-              className={`px-2 py-2 rounded-md text-sm font-medium ${
+            </a>
+            <a 
+              href="/careers" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/careers') 
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
             >
               Careers
-            </Link>
-            <Link 
-              to="/contact" 
-              className={`px-2 py-2 rounded-md text-sm font-medium ${
+            </a>
+            <a 
+              href="/contact" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/contact') 
                   ? 'text-green-600 bg-green-50' 
                   : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
             >
               Contact
-            </Link>
+            </a>
           </div>
           
           <div className="md:hidden flex items-center">
@@ -125,8 +126,8 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link 
-              to="/" 
+            <a 
+              href="/" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/') 
                   ? 'text-green-600 bg-green-50' 
@@ -135,9 +136,9 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Home
-            </Link>
-            <Link 
-              to="/about" 
+            </a>
+            <a 
+              href="/about" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/about') 
                   ? 'text-green-600 bg-green-50' 
@@ -146,9 +147,9 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
-            </Link>
-            <Link 
-              to="/projects" 
+            </a>
+            <a 
+              href="/projects" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/projects') 
                   ? 'text-green-600 bg-green-50' 
@@ -157,9 +158,19 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Projects
-            </Link>
-            <Link 
-              to="/technology" 
+            </a>
+            <a 
+              href="/products" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/products') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Products
+            </a>
+            <a 
+              href="/technology" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/technology') 
                   ? 'text-green-600 bg-green-50' 
@@ -168,9 +179,19 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Technology
-            </Link>
-            <Link 
-              to="/impact" 
+            </a>
+            <a 
+              href="/services" 
+              className={`block px-3 py-2 rounded-md text-base font-medium ${
+                isActive('/services') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600'
+              }`}
+            >
+              Services
+            </a>
+            <a 
+              href="/impact" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/impact') 
                   ? 'text-green-600 bg-green-50' 
@@ -179,9 +200,9 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Impact
-            </Link>
-            <Link 
-              to="/news" 
+            </a>
+            <a 
+              href="/news" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/news') 
                   ? 'text-green-600 bg-green-50' 
@@ -190,9 +211,9 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               News
-            </Link>
-            <Link 
-              to="/careers" 
+            </a>
+            <a 
+              href="/careers" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/careers') 
                   ? 'text-green-600 bg-green-50' 
@@ -201,9 +222,9 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Careers
-            </Link>
-            <Link 
-              to="/contact" 
+            </a>
+            <a 
+              href="/contact" 
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/contact') 
                   ? 'text-green-600 bg-green-50' 
@@ -212,7 +233,7 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
-            </Link>
+            </a>
           </div>
         </div>
       )}
