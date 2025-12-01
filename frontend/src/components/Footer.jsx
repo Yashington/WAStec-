@@ -46,8 +46,8 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="text-lg font-bold mb-4">Resources</h3>
             <ul className="space-y-2">
-              <li><Link to="/news" className="text-gray-300 hover:text-white">News & Media</Link></li>
-              <li><Link to="/careers" className="text-gray-300 hover:text-white">Careers</Link></li>
+              <li><a href="/news" className="text-gray-300 hover:text-white">News & Media</a></li>
+              <li><a href="/careers" className="text-gray-300 hover:text-white">Careers</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white">Blog</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white">Knowledge Hub</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white">Investor Relations</a></li>

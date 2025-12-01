@@ -14,15 +14,15 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
+            <a href="/" className="flex-shrink-0 flex items-center">
               <img src="/logo.jpg" alt="WAStec Logo" className="h-14 w-auto" />
               {/* <span className="ml-2 text-sm text-gray-600 hidden md:block">Kukreja's Bio-Gas Pvt. Ltd.</span> */}
-            </Link>
+            </a>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
+            <a 
+              href="/" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/') 
                   ? 'text-green-600 bg-green-50' 
@@ -30,9 +30,9 @@ const Navbar = () => {
               }`}
             >
               Home
-            </Link>
-            <Link 
-              to="/about" 
+            </a>
+            <a 
+              href="/about" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/about') 
                   ? 'text-green-600 bg-green-50' 
@@ -40,9 +40,9 @@ const Navbar = () => {
               }`}
             >
               About Us
-            </Link>
-            <Link 
-              to="/projects" 
+            </a>
+            <a 
+              href="/projects" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/projects') 
                   ? 'text-green-600 bg-green-50' 
@@ -50,9 +50,9 @@ const Navbar = () => {
               }`}
             >
               Projects
-            </Link>
-            <Link 
-              to="/products" 
+            </a>
+            <a 
+              href="/products" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/products') 
                   ? 'text-green-600 bg-green-50' 
@@ -60,9 +60,9 @@ const Navbar = () => {
               }`}
             >
               Products
-            </Link>
-            <Link 
-              to="/technology" 
+            </a>
+            <a 
+              href="/technology" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/technology') 
                   ? 'text-green-600 bg-green-50' 
@@ -70,9 +70,9 @@ const Navbar = () => {
               }`}
             >
               Technology
-            </Link>
-            <Link 
-              to="/services" 
+            </a>
+            <a 
+              href="/services" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/services') 
                   ? 'text-green-600 bg-green-50' 
@@ -80,9 +80,9 @@ const Navbar = () => {
               }`}
             >
               Services
-            </Link>
-            <Link 
-              to="/impact" 
+            </a>
+            <a 
+              href="/impact" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/impact') 
                   ? 'text-green-600 bg-green-50' 
@@ -90,9 +90,9 @@ const Navbar = () => {
               }`}
             >
               Impact
-            </Link>
-            <Link 
-              to="/news" 
+            </a>
+            <a 
+              href="/news" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/news') 
                   ? 'text-green-600 bg-green-50' 
@@ -100,9 +100,9 @@ const Navbar = () => {
               }`}
             >
               News
-            </Link>
-            <Link 
-              to="/careers" 
+            </a>
+            <a 
+              href="/careers" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/careers') 
                   ? 'text-green-600 bg-green-50' 
@@ -110,9 +110,9 @@ const Navbar = () => {
               }`}
             >
               Careers
-            </Link>
-            <Link 
-              to="/contact" 
+            </a>
+            <a 
+              href="/contact" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/contact') 
                   ? 'text-green-600 bg-green-50' 
@@ -120,7 +120,7 @@ const Navbar = () => {
               }`}
             >
               Contact
-            </Link>
+            </a>
           </div>
           
           <div className="md:hidden flex items-center">
