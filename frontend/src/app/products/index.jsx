@@ -22,7 +22,7 @@ export default function ProductsIndex() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {items.map((it) => (
-              <Link key={it.path} to={it.path} className="group bg-white rounded-xl p-6 shadow-md border hover:shadow-lg transition">
+              <a key={it.path} href={it.path} className="group bg-white rounded-xl p-6 shadow-md border hover:shadow-lg transition">
                 <div className="flex items-start justify-between">
                   <div>
                     <h2 className="text-2xl font-bold text-gray-900 group-hover:text-green-600">{it.title}</h2>
@@ -39,7 +39,7 @@ export default function ProductsIndex() {
                 <div className="mt-4">
                   <span className="text-sm text-green-700 font-medium">Learn more →</span>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

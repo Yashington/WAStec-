@@ -25,9 +25,9 @@ export default function PortableBiogasPlant() {
                   Open Biogas Monitoring App
                 </a>
 
-                <Link to="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md text-green-700 bg-green-100 hover:bg-green-200">
+                <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md text-green-700 bg-green-100 hover:bg-green-200">
                   Get a Quote
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -83,7 +83,7 @@ export default function PortableBiogasPlant() {
               <h3 className="text-lg font-bold text-gray-900">Applications</h3>
               <p className="mt-3 text-gray-600">Restaurants, campuses, hotels, food processing units and community kitchens.</p>
               <div className="mt-4">
-                <Link to="/contact" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Talk to Sales</Link>
+                <a href="/contact" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Talk to Sales</a>
               </div>
             </div>
           </div>

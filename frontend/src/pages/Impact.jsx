@@ -303,9 +303,9 @@ const Impact = () => {
             </div>
             
             <div className="mt-12 text-center">
-              <Link to="/projects" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50">
+              <a href="/projects" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50">
                 View Our Projects
-              </Link>
+              </a>
             </div>
           </div>
         </div>

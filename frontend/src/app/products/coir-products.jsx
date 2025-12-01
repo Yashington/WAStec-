@@ -31,7 +31,7 @@ export default function CoirProducts() {
                 <h3 className="text-lg font-bold text-gray-900">{it.title}</h3>
                 <p className="mt-2 text-gray-600">{it.desc}</p>
                 <div className="mt-4">
-                  <Link to="/contact" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Request Sample</Link>
+                  <a href="/contact" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Request Sample</a>
                 </div>
               </div>
             ))}

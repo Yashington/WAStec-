@@ -13,7 +13,7 @@ export default function ConsultancyDetails() {
     <div className="bg-white text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="mb-6">
-          <Link to="/services" className="text-sm text-green-700 hover:underline">← Back to Services</Link>
+          <a href="/services" className="text-sm text-green-700 hover:underline">← Back to Services</a>
         </div>
 
         {/* Hero */}
@@ -31,7 +31,7 @@ export default function ConsultancyDetails() {
                 and financial returns.
               </p>
               <div className="mt-6">
-                <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-md shadow hover:bg-green-700">Request Consultancy</Link>
+                <a href="/contact" className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-md shadow hover:bg-green-700">Request Consultancy</a>
               </div>
             </div>
 
@@ -148,7 +148,7 @@ export default function ConsultancyDetails() {
             <h3 className="text-2xl font-bold">Ready to Build Your Sustainable Future?</h3>
             <p className="mt-2 text-green-100">Partner with WAStec to design and deliver scalable waste-to-energy solutions.</p>
             <div className="mt-6">
-              <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-white text-green-700 rounded-md font-medium hover:bg-green-50">Request Consultancy</Link>
+              <a href="/contact" className="inline-flex items-center px-6 py-3 bg-white text-green-700 rounded-md font-medium hover:bg-green-50">Request Consultancy</a>
             </div>
           </section>
         </main>

@@ -1,5 +1,3 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
 
 export default function ServicesPage() {
   return (
@@ -18,7 +16,7 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-gray-900">Bio-CNG Plant — Specialized in Food Waste</h3>
               <p className="mt-3 text-gray-600">The Bio-CNG Plant converts biodegradable and food waste into clean, renewable energy using a two-stage (aerobic + anaerobic) digestion system. Outputs include high-methane biogas purified to Bio-CNG and nutrient-rich organic manure.</p>
               <div className="mt-4">
-                <Link to="/services/plants/bio-cng" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More</Link>
+                <a href="/services/plants/bio-cng" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More</a>
               </div>
             </div>
 
@@ -26,7 +24,7 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-gray-900">Bio-Coal Briquette Plant</h3>
               <p className="mt-3 text-gray-600">The WAStec Bio-Coal Briquette Plant converts city green waste—such as pruned branches, tree trimmings, and garden clippings—into eco-friendly, high‑calorific value bio‑coal briquettes.</p>
               <div className="mt-4">
-                <Link to="/services/plants/bio-coal" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More</Link>
+                <a href="/services/plants/bio-coal" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More</a>
               </div>
             </div>
 
@@ -34,7 +32,7 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-gray-900">Coir Processing Plant</h3>
               <p className="mt-3 text-gray-600">Upcycling tender coconut waste into coir-based eco-products like cocopeat, ropes, and sticks.</p>
               <div className="mt-4">
-                <Link to="/services/plants/coir" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More</Link>
+                <a href="/services/plants/coir" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More</a>
               </div>
             </div>
 
@@ -42,7 +40,7 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-gray-900">WAStec Bank (Marketplace of Waste)</h3>
               <p className="mt-3 text-gray-600">A digital waste marketplace that connects waste producers, recyclers, and buyers for a circular economy.</p>
               <div className="mt-4 flex flex-wrap gap-3">
-                <Link to="/services/waste-bank" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More</Link>
+                <a href="/services/waste-bank" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More</a>
                 <a href="https://example.com/waste-bank" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 border border-green-600 text-green-700 rounded-md hover:bg-green-50">Open WAStec Bank App</a>
               </div>
             </div>
@@ -51,7 +49,7 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-gray-900">Zero Waste to Landfill Movement</h3>
               <p className="mt-3 text-gray-600">A sustainability drive to minimize landfill waste through segregation, recycling, and waste-to-energy systems.</p>
               <div className="mt-4">
-                <Link to="/services/zero-waste" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More & Join</Link>
+                <a to="/services/zero-waste" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More & Join</a>
               </div>
             </div>
 
@@ -59,7 +57,7 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-gray-900">Consultancy Services</h3>
               <p className="mt-3 text-gray-600">Providing end-to-end consulting for biogas, waste management, and renewable energy projects.</p>
               <div className="mt-4">
-                <Link to="/services/consultancy" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More & Request Consultancy</Link>
+                <a to="/services/consultancy" className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Learn More & Request Consultancy</a>
               </div>
             </div>
           </div>
@@ -161,7 +159,7 @@ export default function ServicesPage() {
           <h2 className="text-2xl font-bold text-white">Ready to collaborate on a project?</h2>
           <p className="mt-3 text-green-100">We help design and deploy scalable solutions that turn waste into clean energy and valuable products.</p>
           <div className="mt-6">
-            <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-white text-green-700 rounded-md font-medium">Contact Our Team</Link>
+            <a to="/contact" className="inline-flex items-center px-6 py-3 bg-white text-green-700 rounded-md font-medium">Contact Our Team</a>
           </div>
         </div>
       </div>

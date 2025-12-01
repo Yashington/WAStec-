@@ -14,7 +14,7 @@ export default function OrganicBooster() {
             </p>
 
             <div className="mt-6">
-              <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-md shadow hover:bg-green-700">Request Samples</Link>
+              <a href="/contact" className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-md shadow hover:bg-green-700">Request Samples</a>
             </div>
           </div>
 
