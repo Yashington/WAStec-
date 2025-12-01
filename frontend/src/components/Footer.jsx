@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -35,11 +35,11 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-300 hover:text-white">Home</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-white">About Us</Link></li>
-              <li><Link to="/projects" className="text-gray-300 hover:text-white">Projects</Link></li>
-              <li><Link to="/technology" className="text-gray-300 hover:text-white">Technology</Link></li>
-              <li><Link to="/impact" className="text-gray-300 hover:text-white">Impact</Link></li>
+              <li><a href='/' className="text-gray-300 hover:text-white">Home</a></li>
+              <li><a href="/about" className="text-gray-300 hover:text-white">About Us</a></li>
+              <li><a href="/projects" className="text-gray-300 hover:text-white">Projects</a></li>
+              <li><a href="/technology" className="text-gray-300 hover:text-white">Technology</a></li>
+              <li><a href="/impact" className="text-gray-300 hover:text-white">Impact</a></li>
             </ul>
           </div>
           
