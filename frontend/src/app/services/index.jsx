@@ -66,12 +66,12 @@ export default function ServicesPage() {
 
       {/* Bio-CNG detailed section */}
       <div className="mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-lg p-8 bg-gradient-to-r from-green-50 to-blue-50">
+        <div className="rounded-lg p-6 sm:p-8 bg-gradient-to-r from-green-50 to-blue-50">
           <h2 className="text-3xl font-extrabold text-gray-900">Bio-CNG Plant — Specialized in Food Waste</h2>
           <p className="mt-4 text-gray-700">The WAStec Bio-CNG Plant is designed to transform <strong>organic and food waste</strong> into clean, renewable <strong>Compressed Biogas (CBG)</strong> — a sustainable alternative to fossil fuels. This system captures methane from decomposed waste through advanced anaerobic digestion, purifies it, and compresses it for use as green energy.</p>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-6 rounded-xl shadow-md border bg-white">
             <h3 className="text-xl font-bold">Process Overview</h3>
             <ol className="mt-3 list-decimal list-inside text-gray-700 space-y-2">
@@ -95,26 +95,26 @@ export default function ServicesPage() {
 
           <div className="p-6 rounded-xl shadow-md border bg-white">
             <h3 className="text-xl font-bold">Applications & Environmental Impact</h3>
-            <p className="mt-3 text-gray-700">Bio-CNG serves as a clean fuel for <strong>transportation, industrial heating, power generation</strong>, and <strong>cooking</strong> in large institutions. Each ton of food waste processed prevents harmful methane release, saves landfill space, and supports circular waste management, contributing to India’s <strong>Zero Waste and Green Energy</strong> goals.</p>
+            <p className="mt-3 text-gray-700">Bio-CNG serves as a clean fuel for <strong>transportation, industrial heating, power generation</strong>, and <strong>cooking</strong> in large institutions. Each ton of food waste processed prevents harmful methane release, saves landfill space, and supports circular waste management, contributing to India's <strong>Zero Waste and Green Energy</strong> goals.</p>
           </div>
         </div>
       </div>
 
       {/* Bio-Coal detailed section */}
       <div className="mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-lg p-8 bg-gradient-to-r from-green-50 to-blue-50">
+        <div className="rounded-lg p-6 sm:p-8 bg-gradient-to-r from-green-50 to-blue-50">
           <h2 className="text-3xl font-extrabold text-gray-900">🌿 Bio-Coal Plant – Turning City Waste into Green Energy</h2>
           <p className="mt-4 text-gray-700">At <strong>WAStec Bio-GAS Pvt. Ltd.</strong>, our <strong>Bio-Coal Plant</strong> is dedicated to transforming urban green waste, agricultural residues, and horticultural byproducts into sustainable, high-energy bio-coal briquettes. This initiative aligns with our vision of promoting clean energy, circular economy practices, and waste valorization.</p>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-6 rounded-xl shadow-md border bg-white">
             <h3 className="text-xl font-bold">What is Bio-Coal?</h3>
             <p className="mt-3 text-gray-700">Bio-Coal (also known as biomass briquette) is a renewable and carbon-neutral energy source made from organic waste such as dry leaves, sawdust, coconut shells, and tree trimmings. Through a process of <em>shredding, drying, and compression</em>, this biomass is converted into dense, energy-rich briquettes that can replace fossil coal in various industries.</p>
           </div>
 
           <div className="p-6 rounded-xl shadow-md border bg-white">
-            <h3 className="text-xl font-bold">How WAStec’s Bio-Coal Plant Works</h3>
+            <h3 className="text-xl font-bold">How WAStec's Bio-Coal Plant Works</h3>
             <ol className="mt-3 list-decimal list-inside text-gray-700 space-y-2">
               <li><strong>Collection and Segregation:</strong> Green and dry waste from municipal sources, gardens, and farms is collected and sorted.</li>
               <li><strong>Shredding and Drying:</strong> The biomass is processed to remove moisture and prepare it for compression.</li>
@@ -135,7 +135,7 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-6 rounded-xl shadow-md border bg-white">
             <h3 className="text-xl font-bold">Applications</h3>
             <p className="mt-3 text-gray-700">WAStec Bio-Coal briquettes are widely used in industrial boilers and furnaces, power generation plants, brick kilns and ceramic industries, and institutional cooking and rural energy systems.</p>
@@ -147,7 +147,7 @@ export default function ServicesPage() {
               <li>Reduces landfill waste and greenhouse gas emissions</li>
               <li>Prevents open burning of agricultural residues</li>
               <li>Promotes rural employment and sustainable livelihoods</li>
-              <li>Supports India’s Net-Zero Carbon Emission goals</li>
+              <li>Supports India's Net-Zero Carbon Emission goals</li>
               <li>Encourages circular economy through waste-to-energy transformation</li>
             </ul>
           </div>

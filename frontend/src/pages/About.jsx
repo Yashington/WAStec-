@@ -2,35 +2,7 @@ import { Link } from 'react-router-dom'
 
 const About = () => {
   // Project data to showcase
-  const projects = [
-    {
-      id: 1,
-      title: "Biogas Purification Plant",
-      description: "Advanced purification system converting raw biogas to CNG for automotive use",
-      location: "Mumbai, Maharashtra",
-      status: "Operational",
-      feedstock: "Municipal organic waste",
-      capacity: "500 kg/day"
-    },
-    {
-      id: 2,
-      title: "Coconut Waste Upcycling",
-      description: "Transforming coconut shells and husks into briquettes and activated carbon",
-      location: "Kochi, Kerala",
-      status: "Operational",
-      feedstock: "Coconut waste",
-      capacity: "2 tons/day"
-    },
-    {
-      id: 3,
-      title: "Hotel Waste Management",
-      description: "Comprehensive waste-to-energy solution for large hospitality chains",
-      location: "Goa",
-      status: "Under Development",
-      feedstock: "Food waste, organic matter",
-      capacity: "1 ton/day"
-    }
-  ]
+  
 
   return (
     <div className="bg-white">
@@ -92,7 +64,7 @@ const About = () => {
               </div>
               
               <div className="flex justify-center">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 sm:h-80 md:h-96 flex items-center justify-center">
+                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
                   <span className="text-gray-500">Founder's Photo / Company Image</span>
                 </div>
               </div>
@@ -101,77 +73,13 @@ const About = () => {
         </div>
       </div>
 
-      {/* Projects Section */}
-      <div className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:text-center">
-            <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">Our Projects</h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Transforming Waste Across India
-            </p>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Our operational and development projects demonstrating the power of sustainable waste management
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
-              <div key={project.id} className="flex flex-col rounded-xl shadow-lg overflow-hidden bg-white">
-                <div className="flex-shrink-0">
-                  <div className="bg-gray-200 border-2 border-dashed w-full h-48 flex items-center justify-center">
-                    <span className="text-gray-500">Project Image</span>
-                  </div>
-                </div>
-                <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between flex-wrap gap-2">
-                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-                        project.status === 'Operational' 
-                          ? 'bg-green-100 text-green-800' 
-                          : 'bg-yellow-100 text-yellow-800'
-                      }`}>
-                        {project.status}
-                      </span>
-                      <span className="text-sm text-gray-500">{project.location}</span>
-                    </div>
-                    <h3 className="mt-4 text-xl font-bold text-gray-900">{project.title}</h3>
-                    <p className="mt-3 text-base text-gray-500">{project.description}</p>
-                  </div>
-                  <div className="mt-6 flex items-center">
-                    <div className="flex-shrink-0">
-                      <div className="bg-gray-200 border-2 border-dashed rounded-full w-10 h-10 flex items-center justify-center">
-                        <span className="text-gray-500 text-xs">Icon</span>
-                      </div>
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-900">Capacity: {project.capacity}</p>
-                      <p className="text-sm text-gray-500">Feedstock: {project.feedstock}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="mt-12 text-center">
-            <Link 
-              to="/projects" 
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
-            >
-              View All Projects
-              <svg className="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </div>
+     
 
       {/* Mission & Vision */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-white to-green-50 p-6 sm:p-8 rounded-xl shadow-md border border-green-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="bg-gradient-to-br from-white to-green-50 p-8 rounded-xl shadow-md border border-green-100">
               <div className="bg-green-100 p-3 rounded-full w-12 h-12 flex items-center justify-center">
                 <svg className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -183,7 +91,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-white to-blue-50 p-6 sm:p-8 rounded-xl shadow-md border border-blue-100">
+            <div className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-xl shadow-md border border-blue-100">
               <div className="bg-blue-100 p-3 rounded-full w-12 h-12 flex items-center justify-center">
                 <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -196,11 +104,11 @@ const About = () => {
             </div>
           </div>
           
-          <div className="mt-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-6 sm:p-8 text-white">
+          <div className="mt-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white">
             <h3 className="text-2xl font-bold">Founder's Message</h3>
             <div className="mt-6 flex flex-col md:flex-row items-center">
               <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center">
+                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 flex items-center justify-center">
                   <span className="text-gray-500">Founder Photo</span>
                 </div>
               </div>
@@ -326,7 +234,7 @@ const About = () => {
             </div>
             
             <div className="flex justify-center">
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 sm:h-80 md:h-96 flex items-center justify-center">
+              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
                 <span className="text-gray-500">AIC-BARC Facility Image</span>
               </div>
             </div>
