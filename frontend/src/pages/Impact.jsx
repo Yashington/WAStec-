@@ -74,8 +74,8 @@ const Impact = () => {
             </p>
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 shadow-lg">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="mt-12 bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-6 sm:p-8 shadow-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">Sustainability Impact Calculator</h3>
                 <p className="mt-4 text-lg text-gray-600">
@@ -92,7 +92,7 @@ const Impact = () => {
                       id="waste-input"
                       value={wasteInput}
                       onChange={(e) => setWasteInput(e.target.value)}
-                      className="focus:ring-green-500 focus:border-green-500 block w-full pr-12 sm:text-sm border-gray-300 rounded-md py-3"
+                      className="focus:ring-green-500 focus:border-green-500 block w-full pr-12 sm:text-sm border-gray-300 rounded-md py-2 sm:py-3"
                       placeholder="Enter amount in kg"
                     />
                     <div className="absolute inset-y-0 right-0 flex items-center">
@@ -107,7 +107,7 @@ const Impact = () => {
                   
                   <button
                     onClick={calculateImpact}
-                    className="mt-6 w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                    className="mt-6 w-full flex justify-center py-2 sm:py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                   >
                     Calculate Impact
                   </button>
@@ -137,7 +137,7 @@ const Impact = () => {
                     </div>
                   </div>
                 ) : (
-                  <div className="mt-6 text-center py-12">
+                  <div className="mt-6 text-center py-8 sm:py-12">
                     <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                     </svg>
@@ -166,10 +166,10 @@ const Impact = () => {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
             {impactStats.map((stat) => (
               <div key={stat.id} className="bg-white p-6 rounded-xl shadow-md text-center border border-gray-100">
-                <div className="text-3xl font-extrabold text-green-600">{stat.value}{stat.unit && <span className="text-xl"> {stat.unit}</span>}</div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-green-600">{stat.value}{stat.unit && <span className="text-xl sm:text-2xl"> {stat.unit}</span>}</div>
                 <h3 className="mt-2 text-lg font-medium text-gray-900">{stat.name}</h3>
                 <p className="mt-1 text-sm text-gray-500">{stat.description}</p>
               </div>
@@ -177,10 +177,10 @@ const Impact = () => {
           </div>
 
           {/* Additional Metrics */}
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 sm:mt-12 grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">
             {additionalMetrics.map((metric) => (
               <div key={metric.id} className="bg-gradient-to-br from-white to-green-50 p-6 rounded-xl shadow-md text-center border border-green-100">
-                <div className="text-3xl font-extrabold text-green-600">{metric.value}{metric.unit && <span className="text-xl"> {metric.unit}</span>}</div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-green-600">{metric.value}{metric.unit && <span className="text-xl sm:text-2xl"> {metric.unit}</span>}</div>
                 <h3 className="mt-2 text-lg font-medium text-gray-900">{metric.name}</h3>
                 <p className="mt-1 text-sm text-gray-500">{metric.description}</p>
               </div>
@@ -202,11 +202,11 @@ const Impact = () => {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Waste Diverted Chart */}
             <div className="bg-gradient-to-br from-white to-green-50 p-6 rounded-xl shadow-md border border-green-100">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Waste Diverted from Landfills (Tons)</h3>
-              <div className="bg-gray-100 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center">
+              <div className="bg-gray-100 border-2 border-dashed rounded-xl w-full h-48 sm:h-64 flex items-center justify-center">
                 <span className="text-gray-500">Waste Diverted Chart Visualization</span>
               </div>
               <div className="mt-4 flex justify-between text-sm text-gray-500">
@@ -218,7 +218,7 @@ const Impact = () => {
             {/* CO2 Savings Chart */}
             <div className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-md border border-blue-100">
               <h3 className="text-lg font-bold text-gray-900 mb-4">CO2 Emissions Avoided (Tons)</h3>
-              <div className="bg-gray-100 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center">
+              <div className="bg-gray-100 border-2 border-dashed rounded-xl w-full h-48 sm:h-64 flex items-center justify-center">
                 <span className="text-gray-500">CO2 Savings Chart Visualization</span>
               </div>
               <div className="mt-4 flex justify-between text-sm text-gray-500">
@@ -244,10 +244,10 @@ const Impact = () => {
           </div>
 
           <div className="mt-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {sdgGoals.map((goal) => (
                 <div key={goal.id} className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-                  <div className={`mx-auto w-16 h-16 rounded-full ${goal.color} flex items-center justify-center text-white font-bold text-lg`}>
+                  <div className={`mx-auto w-12 h-12 sm:w-16 sm:h-16 rounded-full ${goal.color} flex items-center justify-center text-white font-bold text-lg`}>
                     {goal.goal}
                   </div>
                   <h3 className="mt-4 text-lg font-medium text-gray-900">{goal.title}</h3>
@@ -274,10 +274,10 @@ const Impact = () => {
             </p>
           </div>
 
-          <div className="mt-12 bg-white bg-opacity-10 rounded-xl p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="mt-12 bg-white bg-opacity-10 rounded-xl p-6 sm:p-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-white">2023</div>
+                <div className="text-2xl sm:text-4xl font-bold text-white">2023</div>
                 <div className="mt-2 text-green-200">Baseline Year</div>
                 <div className="mt-4 h-2 bg-green-300 bg-opacity-30 rounded-full">
                   <div className="h-2 bg-white rounded-full w-0"></div>
@@ -285,16 +285,16 @@ const Impact = () => {
               </div>
               
               <div className="text-center">
-                <div className="text-4xl font-bold text-white">2025</div>
+                <div className="text-2xl sm:text-4xl font-bold text-white">2025</div>
                 <div className="mt-2 text-green-200">Current Progress</div>
                 <div className="mt-4 h-2 bg-green-300 bg-opacity-30 rounded-full">
                   <div className="h-2 bg-white rounded-full w-2/3"></div>
                 </div>
-                <div className="mt-4 text-2xl font-bold text-white">65% Reduction</div>
+                <div className="mt-4 text-xl sm:text-2xl font-bold text-white">65% Reduction</div>
               </div>
               
               <div className="text-center">
-                <div className="text-4xl font-bold text-white">2030</div>
+                <div className="text-2xl sm:text-4xl font-bold text-white">2030</div>
                 <div className="mt-2 text-green-200">Net Zero Target</div>
                 <div className="mt-4 h-2 bg-green-300 bg-opacity-30 rounded-full">
                   <div className="h-2 bg-white rounded-full w-full"></div>

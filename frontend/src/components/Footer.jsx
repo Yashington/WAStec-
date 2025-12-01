@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-1">
             <h3 className="text-lg font-bold mb-4">kukreja's WAStec Bio-Gas Pvt Ltd.</h3>
             <p className="text-gray-300 mb-4">
@@ -59,8 +59,8 @@ const Footer = () => {
             <address className="not-italic text-gray-300">
               <p className="mb-2">AIC-BARC, 1st Flr, DAE Con,</p>
               <p className="mb-2">Anushaktinagar, Mumbai, 400094</p>
-              <p className="mb-2">Email: <a href="mailto:wastec.biogas@gmail.com">wastec.biogas@gmail.com</a></p>
-              <p>Phone: <a href="tel:+91 9136038843">+91 9136038843</a></p>
+              <p className="mb-2">Email: <a href="mailto:wastec.biogas@gmail.com" className="hover:text-white">wastec.biogas@gmail.com</a></p>
+              <p>Phone: <a href="tel:+91 9136038843" className="hover:text-white">+91 9136038843</a></p>
             </address>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Footer = () => {
           <p className="text-gray-400">
             &copy; {new Date().getFullYear()} kukreja's WAStec Bio-Gas Pvt Ltd. All rights reserved.
           </p>
-          <p className="text-gray-400 mt-2">
+          <p className="text-gray-400 mt-2 text-sm">
             "Turning Waste into Worth" | "Waste to Wealth. Science to Sustainability."
           </p>
           <div className="mt-4">

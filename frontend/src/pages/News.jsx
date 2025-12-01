@@ -150,11 +150,11 @@ const News = () => {
                 </div>
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div className="flex-1">
-                    <div className="flex items-center">
+                    <div className="flex items-center flex-wrap gap-2">
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                         {news.category}
                       </span>
-                      <span className="ml-3 text-sm text-gray-500">{news.date}</span>
+                      <span className="text-sm text-gray-500">{news.date}</span>
                     </div>
                     <h3 className="mt-4 text-xl font-bold text-gray-900">{news.title}</h3>
                     <p className="mt-3 text-base text-gray-500">{news.excerpt}</p>
@@ -191,7 +191,7 @@ const News = () => {
                   <li key={news.id}>
                     <Link to="#" className="block hover:bg-gray-50">
                       <div className="px-4 py-4 sm:px-6">
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between flex-wrap gap-2">
                           <p className="text-sm font-medium text-green-600 truncate">{news.title}</p>
                           <div className="ml-2 flex-shrink-0 flex">
                             <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
@@ -219,7 +219,7 @@ const News = () => {
               </ul>
             </div>
             
-            <div className="mt-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white">
+            <div className="mt-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-6 sm:p-8 text-white">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-2xl font-bold">Swachh Bharat & Biogas Integration</h3>
@@ -238,8 +238,8 @@ const News = () => {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div className="bg-white bg-opacity-20 border-2 border-dashed border-white rounded-xl w-full h-64 flex items-center justify-center">
-                    <span className="text-white">Swachh Bharat & Biogas Integration</span>
+                  <div className="bg-white bg-opacity-20 border-2 border-dashed border-white rounded-xl w-full h-48 sm:h-64 flex items-center justify-center">
+                    <span className="text-white text-sm">Swachh Bharat & Biogas Integration</span>
                   </div>
                 </div>
               </div>
@@ -270,7 +270,7 @@ const News = () => {
                     <li key={news.id}>
                       <Link to="#" className="block hover:bg-gray-100">
                         <div className="px-4 py-4 sm:px-6">
-                          <div className="flex items-center justify-between">
+                          <div className="flex items-center justify-between flex-wrap gap-2">
                             <p className="text-sm font-medium text-green-600 truncate">{news.title}</p>
                           </div>
                           <div className="mt-2 sm:flex sm:justify-between">
@@ -367,7 +367,7 @@ const News = () => {
                   <li key={news.id}>
                     <Link to="#" className="block hover:bg-gray-50">
                       <div className="px-4 py-4 sm:px-6">
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between flex-wrap gap-2">
                           <p className="text-sm font-medium text-green-600 truncate">{news.title}</p>
                           <div className="ml-2 flex-shrink-0 flex">
                             <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
@@ -452,25 +452,25 @@ const News = () => {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="flex justify-center items-center bg-white p-6 rounded-lg shadow">
-              <div className="bg-gray-200 border-2 border-dashed rounded w-32 h-16 flex items-center justify-center">
-                <span className="text-gray-500">Media Logo</span>
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            <div className="flex justify-center items-center bg-white p-4 sm:p-6 rounded-lg shadow">
+              <div className="bg-gray-200 border-2 border-dashed rounded w-24 h-12 sm:w-32 sm:h-16 flex items-center justify-center">
+                <span className="text-gray-500 text-xs sm:text-sm">Media Logo</span>
               </div>
             </div>
-            <div className="flex justify-center items-center bg-white p-6 rounded-lg shadow">
-              <div className="bg-gray-200 border-2 border-dashed rounded w-32 h-16 flex items-center justify-center">
-                <span className="text-gray-500">Media Logo</span>
+            <div className="flex justify-center items-center bg-white p-4 sm:p-6 rounded-lg shadow">
+              <div className="bg-gray-200 border-2 border-dashed rounded w-24 h-12 sm:w-32 sm:h-16 flex items-center justify-center">
+                <span className="text-gray-500 text-xs sm:text-sm">Media Logo</span>
               </div>
             </div>
-            <div className="flex justify-center items-center bg-white p-6 rounded-lg shadow">
-              <div className="bg-gray-200 border-2 border-dashed rounded w-32 h-16 flex items-center justify-center">
-                <span className="text-gray-500">Media Logo</span>
+            <div className="flex justify-center items-center bg-white p-4 sm:p-6 rounded-lg shadow">
+              <div className="bg-gray-200 border-2 border-dashed rounded w-24 h-12 sm:w-32 sm:h-16 flex items-center justify-center">
+                <span className="text-gray-500 text-xs sm:text-sm">Media Logo</span>
               </div>
             </div>
-            <div className="flex justify-center items-center bg-white p-6 rounded-lg shadow">
-              <div className="bg-gray-200 border-2 border-dashed rounded w-32 h-16 flex items-center justify-center">
-                <span className="text-gray-500">Media Logo</span>
+            <div className="flex justify-center items-center bg-white p-4 sm:p-6 rounded-lg shadow">
+              <div className="bg-gray-200 border-2 border-dashed rounded w-24 h-12 sm:w-32 sm:h-16 flex items-center justify-center">
+                <span className="text-gray-500 text-xs sm:text-sm">Media Logo</span>
               </div>
             </div>
           </div>

@@ -90,8 +90,12 @@ const Projects = () => {
                 </div>
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                    <div className="flex items-center justify-between flex-wrap gap-2">
+                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
+                        project.status === 'Operational' 
+                          ? 'bg-green-100 text-green-800' 
+                          : 'bg-yellow-100 text-yellow-800'
+                      }`}>
                         {project.status}
                       </span>
                       <span className="text-sm text-gray-500">{project.location}</span>
@@ -183,32 +187,32 @@ const Projects = () => {
           <div className="mt-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-24 h-24 flex items-center justify-center">
-                  <span className="text-gray-500">CNG</span>
+                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">CNG</span>
                 </div>
                 <h3 className="mt-4 text-lg font-medium text-gray-900">Compressed Natural Gas</h3>
                 <p className="mt-2 text-sm text-gray-500">Clean automotive fuel</p>
               </div>
               
               <div className="text-center">
-                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-24 h-24 flex items-center justify-center">
-                  <span className="text-gray-500">Briquettes</span>
+                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">Briquettes</span>
                 </div>
                 <h3 className="mt-4 text-lg font-medium text-gray-900">Biomass Briquettes</h3>
                 <p className="mt-2 text-sm text-gray-500">Clean cooking fuel</p>
               </div>
               
               <div className="text-center">
-                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-24 h-24 flex items-center justify-center">
-                  <span className="text-gray-500">Compost</span>
+                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">Compost</span>
                 </div>
                 <h3 className="mt-4 text-lg font-medium text-gray-900">Organic Compost</h3>
                 <p className="mt-2 text-sm text-gray-500">Nutrient-rich fertilizer</p>
               </div>
               
               <div className="text-center">
-                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-24 h-24 flex items-center justify-center">
-                  <span className="text-gray-500">Carbon</span>
+                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
+                  <span className="text-gray-500 text-sm">Carbon</span>
                 </div>
                 <h3 className="mt-4 text-lg font-medium text-gray-900">Activated Carbon</h3>
                 <p className="mt-2 text-sm text-gray-500">Industrial adsorbent</p>

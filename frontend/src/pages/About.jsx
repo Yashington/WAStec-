@@ -92,7 +92,7 @@ const About = () => {
               </div>
               
               <div className="flex justify-center">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
+                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 sm:h-80 md:h-96 flex items-center justify-center">
                   <span className="text-gray-500">Founder's Photo / Company Image</span>
                 </div>
               </div>
@@ -124,7 +124,7 @@ const About = () => {
                 </div>
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div className="flex-1">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between flex-wrap gap-2">
                       <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
                         project.status === 'Operational' 
                           ? 'bg-green-100 text-green-800' 
@@ -170,8 +170,8 @@ const About = () => {
       {/* Mission & Vision */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-br from-white to-green-50 p-8 rounded-xl shadow-md border border-green-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-white to-green-50 p-6 sm:p-8 rounded-xl shadow-md border border-green-100">
               <div className="bg-green-100 p-3 rounded-full w-12 h-12 flex items-center justify-center">
                 <svg className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -183,7 +183,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-xl shadow-md border border-blue-100">
+            <div className="bg-gradient-to-br from-white to-blue-50 p-6 sm:p-8 rounded-xl shadow-md border border-blue-100">
               <div className="bg-blue-100 p-3 rounded-full w-12 h-12 flex items-center justify-center">
                 <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -196,11 +196,11 @@ const About = () => {
             </div>
           </div>
           
-          <div className="mt-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white">
+          <div className="mt-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-6 sm:p-8 text-white">
             <h3 className="text-2xl font-bold">Founder's Message</h3>
             <div className="mt-6 flex flex-col md:flex-row items-center">
               <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 flex items-center justify-center">
+                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center">
                   <span className="text-gray-500">Founder Photo</span>
                 </div>
               </div>
@@ -326,7 +326,7 @@ const About = () => {
             </div>
             
             <div className="flex justify-center">
-              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
+              <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 sm:h-80 md:h-96 flex items-center justify-center">
                 <span className="text-gray-500">AIC-BARC Facility Image</span>
               </div>
             </div>

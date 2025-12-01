@@ -132,7 +132,7 @@ const Technology = () => {
             </div>
             
             <div className="flex justify-center">
-              <div className="bg-white bg-opacity-20 border-2 border-dashed border-white rounded-xl w-full h-96 flex items-center justify-center">
+              <div className="bg-white bg-opacity-20 border-2 border-dashed border-white rounded-xl w-full h-64 sm:h-80 md:h-96 flex items-center justify-center">
                 <span className="text-white">Nisargruna Technology Visualization</span>
               </div>
             </div>
@@ -190,7 +190,7 @@ const Technology = () => {
               </div>
               
               <div className="flex justify-center">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
+                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 sm:h-80 md:h-96 flex items-center justify-center">
                   <span className="text-gray-500">Technology Visualization</span>
                 </div>
               </div>
@@ -219,7 +219,7 @@ const Technology = () => {
                   <div key={step.id} className="relative">
                     {/* Vertical line for mobile */}
                     {index < processSteps.length - 1 && (
-                      <div className="md:hidden absolute top-12 left-1/2 h-12 w-0.5 bg-gray-300 transform translate-x-0"></div>
+                      <div className="md:hidden absolute top-12 left-1/2 h-12 w-0.5 bg-gray-300 transform -translate-x-1/2"></div>
                     )}
                     
                     <div className="relative bg-white p-6 rounded-xl shadow-md border border-gray-200">
@@ -251,7 +251,7 @@ const Technology = () => {
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {researchItems.map((item) => (
               <div key={item.id} className="bg-gradient-to-br from-white to-green-50 p-6 rounded-xl shadow-md border border-green-100">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between flex-wrap gap-2">
                   <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                     {item.status}
@@ -267,7 +267,7 @@ const Technology = () => {
             ))}
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white">
+          <div className="mt-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-6 sm:p-8 text-white">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl font-bold">Research Publications</h3>
@@ -282,8 +282,8 @@ const Technology = () => {
               </div>
               <div className="flex justify-center">
                 <div className="bg-white bg-opacity-20 rounded-lg p-4">
-                  <div className="bg-gray-200 border-2 border-dashed rounded w-48 h-32 flex items-center justify-center">
-                    <span className="text-gray-700">Research Paper Cover</span>
+                  <div className="bg-gray-200 border-2 border-dashed rounded w-32 h-24 sm:w-48 sm:h-32 flex items-center justify-center">
+                    <span className="text-gray-700 text-sm">Research Paper Cover</span>
                   </div>
                 </div>
               </div>
