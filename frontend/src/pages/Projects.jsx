@@ -4,6 +4,8 @@ import biomass_briquettes from "../assets/images/2nd.png"
 import carbon from "../assets/images/3rd.png"
 import compost from "../assets/images/4th.png"
 import coconut from "../assets/images/coconut.jpg"
+import biogas_plant from "../assets/images/biogas_analysis.jpg"
+import hotel_waste from "../assets/images/hotel_waste.png"
 
 
 const Projects = () => {
@@ -16,7 +18,7 @@ const Projects = () => {
       status: "Operational",
       feedstock: "Municipal organic waste",
       capacity: "500 kg/day",
-      image: "project1"
+      image: biogas_plant
     },
     {
       id: 2,
@@ -26,7 +28,7 @@ const Projects = () => {
       status: "Operational",
       feedstock: "Coconut waste",
       capacity: "2 tons/day",
-      image: {coconut}
+      image: coconut
     },
     {
       id: 3,
@@ -36,7 +38,7 @@ const Projects = () => {
       status: "Under Development",
       feedstock: "Food waste, organic matter",
       capacity: "1 ton/day",
-      image: "project3"
+      image: hotel_waste
     }
   ]
 
@@ -91,7 +93,7 @@ const Projects = () => {
               <div key={project.id} className="flex flex-col rounded-xl shadow-lg overflow-hidden">
                 <div className="flex-shrink-0">
                   <div className="bg-gray-200 border-2 border-dashed w-full h-48 flex items-center justify-center">
-                    <span className="text-gray-500">Project Image</span>
+                    <img src={project.image || ""} alt={project.title} />
                   </div>
                 </div>
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -110,12 +112,12 @@ const Projects = () => {
                     <p className="mt-3 text-base text-gray-500">{project.description}</p>
                   </div>
                   <div className="mt-6 flex items-center">
-                    <div className="flex-shrink-0">
+                    {/* <div className="flex-shrink-0">
                       <div className="bg-gray-200 border-2 border-dashed rounded-full w-10 h-10 flex items-center justify-center">
                         <span className="text-gray-500 text-xs">Icon</span>
                       </div>
-                    </div>
-                    <div className="ml-3">
+                    </div> */}
+                    <div className="">
                       <p className="text-sm font-medium text-gray-900">Capacity: {project.capacity}</p>
                       <p className="text-sm text-gray-500">Feedstock: {project.feedstock}</p>
                     </div>
