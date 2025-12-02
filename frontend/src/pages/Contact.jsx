@@ -20,19 +20,31 @@ const Contact = () => {
 
   // Load Google Maps script
   useEffect(() => {
-    const script = document.createElement('script')
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${import.meta.env.VITE_APP_GOOGLE_MAPS_API_KEY}&libraries=places`
-    script.async = true
-    script.defer = true
-    script.onload = () => setIsMapLoaded(true)
-    script.onerror = () => console.error('Failed to load Google Maps script')
-    document.head.appendChild(script)
+    const googleMapsApiKey = import.meta.env.VITE_APP_GOOGLE_MAPS_API_KEY;
+    
+    // Check if API key is provided
+    if (!googleMapsApiKey) {
+      console.warn('Google Maps API key is not set. Map will not be displayed.');
+      setIsMapLoaded(false);
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&libraries=places`;
+    script.async = true;
+    script.defer = true;
+    script.onload = () => setIsMapLoaded(true);
+    script.onerror = () => {
+      console.error('Failed to load Google Maps script');
+      setIsMapLoaded(false);
+    };
+    document.head.appendChild(script);
 
     return () => {
       if (document.head.contains(script)) {
-        document.head.removeChild(script)
+        document.head.removeChild(script);
       }
-    }
+    };
   }, [])
 
   const handleChange = (e) => {
@@ -149,7 +161,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900">Send us a message</h2>
               <p className="mt-2 text-gray-600">
                 Have questions about our technology or services? Fill out the form below and we'll get back to you as soon as possible.
@@ -203,7 +215,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
+                        className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out sm:text-sm"
                       />
                     </div>
                   </div>
@@ -219,7 +231,7 @@ const Contact = () => {
                         id="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
+                        className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out sm:text-sm"
                       />
                     </div>
                   </div>
@@ -236,7 +248,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
+                        className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out sm:text-sm"
                       />
                     </div>
                   </div>
@@ -252,7 +264,7 @@ const Contact = () => {
                         id="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
+                        className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out sm:text-sm"
                       />
                     </div>
                   </div>
@@ -269,7 +281,7 @@ const Contact = () => {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
+                        className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out sm:text-sm"
                       />
                     </div>
                   </div>
@@ -286,7 +298,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out"
+                        className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md transition duration-150 ease-in-out sm:text-sm"
                       />
                     </div>
                   </div>
@@ -296,11 +308,11 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`ml-3 inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150 ease-in-out ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    className={`ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-150 ease-in-out ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
                     {isSubmitting ? (
                       <>
-                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <svg className="animate-spin -ml-1 mr-3 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
@@ -324,7 +336,7 @@ const Contact = () => {
                   <GoogleMap center={mapCenter} zoom={15} />
                 ) : (
                   <div className="w-full h-full bg-gray-200 border-2 border-dashed rounded-xl flex items-center justify-center">
-                    <div className="text-center">
+                    <div className="text-center p-4">
                       <svg className="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+
 const Home = () => {
   const [biogasOutput, setBiogasOutput] = useState(1250000)
   const [co2Saved, setCo2Saved] = useState(450000)
@@ -38,7 +39,7 @@ const Home = () => {
     <div className="bg-white">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-green-50 to-blue-50">
-        <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 sm:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
@@ -49,29 +50,29 @@ const Home = () => {
                 BARC-incubated startup pioneering biogas purification and waste upcycling technologies for a sustainable future.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link
+                <a
                   to="/contact"
                   className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"
                 >
                  Contact Us
-                </Link>
-                <Link
+                </a>
+                <a
                   to="/about"
                   className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-green-700 bg-green-100 hover:bg-green-200 md:py-4 md:text-lg md:px-10"
                 >
                   Learn More
-                </Link>
+                </a>
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="relative">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
-                  <span className="text-gray-500">Biogas Plant Visualization</span>
+              <div className="relative w-full">
+                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 sm:h-80 md:h-96 flex items-center justify-center">
+
                 </div>
-                <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
+                <div className="absolute -bottom-4 -right-4 bg-white p-3 sm:p-4 rounded-lg shadow-lg">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">{biogasOutput.toLocaleString()}</div>
-                    <div className="text-sm text-gray-500">Liters Generated Today</div>
+                    <div className="text-xl sm:text-2xl font-bold text-green-600">{biogasOutput.toLocaleString()}</div>
+                    <div className="text-xs sm:text-sm text-gray-500">Liters Generated Today</div>
                   </div>
                 </div>
               </div>
@@ -94,12 +95,12 @@ const Home = () => {
           </div>
 
           <div className="mt-10">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat) => (
                 <div key={stat.id} className="bg-gradient-to-br from-white to-green-50 p-6 rounded-xl shadow-md border border-green-100">
                   <dt className="text-base font-medium text-gray-900">{stat.name}</dt>
                   <dd className="mt-1 flex justify-between items-baseline md:block lg:flex">
-                    <div className="text-3xl font-extrabold text-green-600">{stat.value}</div>
+                    <div className="text-2xl sm:text-3xl font-extrabold text-green-600">{stat.value}</div>
                   </dd>
                 </div>
               ))}
@@ -125,7 +126,7 @@ const Home = () => {
             {/* Biogas Production Chart */}
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Biogas Production (Monthly)</h3>
-              <div className="bg-gray-100 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center">
+              <div className="bg-gray-100 border-2 border-dashed rounded-xl w-full h-48 sm:h-64 flex items-center justify-center">
                 <span className="text-gray-500">Biogas Production Chart Visualization</span>
               </div>
               <div className="mt-4 flex justify-between text-sm text-gray-500">
@@ -137,7 +138,7 @@ const Home = () => {
             {/* CO2 Savings Chart */}
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h3 className="text-lg font-bold text-gray-900 mb-4">CO2 Savings (Monthly)</h3>
-              <div className="bg-gray-100 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center">
+              <div className="bg-gray-100 border-2 border-dashed rounded-xl w-full h-48 sm:h-64 flex items-center justify-center">
                 <span className="text-gray-500">CO2 Savings Chart Visualization</span>
               </div>
               <div className="mt-4 flex justify-between text-sm text-gray-500">
@@ -148,21 +149,21 @@ const Home = () => {
           </div>
 
           {/* Additional Metrics */}
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-6 text-white">
-              <div className="text-3xl font-bold">24</div>
+              <div className="text-2xl sm:text-3xl font-bold">24</div>
               <div className="text-lg">Active Plants</div>
               <div className="mt-2 text-green-100">Across 8 states</div>
             </div>
             
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-6 text-white">
-              <div className="text-3xl font-bold">12.5</div>
+              <div className="text-2xl sm:text-3xl font-bold">12.5</div>
               <div className="text-lg">MW Energy Generated</div>
               <div className="mt-2 text-blue-100">This year</div>
             </div>
             
             <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-6 text-white">
-              <div className="text-3xl font-bold">8</div>
+              <div className="text-2xl sm:text-3xl font-bold">8</div>
               <div className="text-lg">Years of Innovation</div>
               <div className="mt-2 text-purple-100">Since inception</div>
             </div>
@@ -232,7 +233,7 @@ const Home = () => {
             <p className="mt-4 text-lg text-green-100">
               Join us in building a sustainable future with clean energy solutions.
             </p>
-            <div className="mt-10 flex justify-center space-x-4">
+            <div className="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50"

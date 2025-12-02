@@ -33,7 +33,7 @@ export default function PortableBiogasPlant() {
 
             <div className="flex justify-center">
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 w-full">
-                <div className="bg-gray-100 rounded-md h-64 flex items-center justify-center">
+                <div className="bg-gray-100 rounded-md h-48 sm:h-64 flex items-center justify-center">
                   <span className="text-gray-500">Portable Biogas Plant Image</span>
                 </div>
                 <div className="mt-6 grid grid-cols-1 gap-3">
