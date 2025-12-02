@@ -13,13 +13,13 @@ export default function ZeroWastePage() {
         </div>
 
         {/* Hero */}
-        <header className={`rounded-lg p-8 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-500 bg-gradient-to-r from-green-50 to-blue-50`}>
+        <header className={`rounded-lg p-6 sm:p-8 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-500 bg-gradient-to-r from-green-50 to-blue-50`}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div>
               <h1 className="text-4xl font-extrabold text-gray-900">Zero Waste to Landfill Movement</h1>
               <p className="mt-4 text-lg text-gray-700 max-w-2xl">Building a Circular Economy — One Step at a Time</p>
               <p className="mt-4 text-gray-600 max-w-3xl">
-                WAStec’s Zero Waste to Landfill Movement aims to reduce, reuse, and recycle all possible waste streams to ensure
+                WAStec's Zero Waste to Landfill Movement aims to reduce, reuse, and recycle all possible waste streams to ensure
                 nothing ends up in landfills. We work with industries, institutions, and communities to create efficient waste
                 management systems that prioritize sustainability and resource recovery.
               </p>
@@ -29,7 +29,7 @@ export default function ZeroWastePage() {
             </div>
 
             <div className="flex justify-center">
-              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100 w-full h-56 flex items-center justify-center">
+              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100 w-full h-48 sm:h-56 flex items-center justify-center">
                 <div className="text-gray-500">Zero Waste Illustration</div>
               </div>
             </div>
@@ -93,13 +93,13 @@ export default function ZeroWastePage() {
           {/* Impact */}
           <section className={`p-6 rounded-xl shadow-md border ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-500 bg-white`}>
             <h2 className="text-2xl font-bold text-gray-900">Our Impact</h2>
-            <p className="mt-3 text-gray-700">WAStec Bio-GAS Pvt. Ltd. has worked with municipalities, corporates, and institutions to divert tons of waste from landfills each year. Through our IoT-powered biogas and recycling systems, we ensure that every waste stream contributes to India’s sustainable energy future.</p>
+            <p className="mt-3 text-gray-700">WAStec Bio-GAS Pvt. Ltd. has worked with municipalities, corporates, and institutions to divert tons of waste from landfills each year. Through our IoT-powered biogas and recycling systems, we ensure that every waste stream contributes to India's sustainable energy future.</p>
           </section>
 
           {/* CTA */}
-          <section className={`p-8 rounded-xl text-white text-center bg-gradient-to-r from-green-600 to-blue-600 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-500`}>
+          <section className={`p-6 sm:p-8 rounded-xl text-white text-center bg-gradient-to-r from-green-600 to-blue-600 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-500`}>
             <h3 className="text-2xl font-bold">Join the Movement</h3>
-            <p className="mt-2 text-green-100">Be a part of WAStec’s mission to create a cleaner, greener India. Partner with us to achieve a Zero Waste to Landfill certification for your organization.</p>
+            <p className="mt-2 text-green-100">Be a part of WAStec's mission to create a cleaner, greener India. Partner with us to achieve a Zero Waste to Landfill certification for your organization.</p>
             <div className="mt-6">
               <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-white text-green-700 rounded-md font-medium hover:bg-green-50">Get in Touch</Link>
             </div>

@@ -284,7 +284,7 @@ const Careers = () => {
             </p>
           </div>
 
-          <div className="mt-12 bg-white bg-opacity-10 rounded-xl p-8 max-w-3xl mx-auto">
+          <div className="mt-12 bg-white bg-opacity-10 rounded-xl p-6 sm:p-8 max-w-3xl mx-auto">
             {submitSuccess && (
               <div className="mb-6 p-4 bg-green-50 rounded-md">
                 <div className="flex">
@@ -333,7 +333,7 @@ const Careers = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900"
+                      className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -350,7 +350,7 @@ const Careers = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900"
+                      className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -366,7 +366,7 @@ const Careers = () => {
                       id="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900"
+                      className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -382,7 +382,7 @@ const Careers = () => {
                       id="position"
                       value={formData.position}
                       onChange={handleChange}
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900"
+                      className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -398,7 +398,7 @@ const Careers = () => {
                       rows={3}
                       value={formData.experience}
                       onChange={handleChange}
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900"
+                      className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -414,7 +414,7 @@ const Careers = () => {
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900"
+                      className="py-2 px-3 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md text-gray-900 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -424,7 +424,7 @@ const Careers = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`ml-3 inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className={`ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-green-600 bg-white hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
                 </button>

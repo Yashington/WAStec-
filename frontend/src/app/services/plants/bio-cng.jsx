@@ -12,7 +12,7 @@ export default function BioCNGPage() {
           <Link to="/services/plants" className="text-sm text-green-700 hover:underline">← Back to Plant Services</Link>
         </div>
 
-        <header className={`rounded-lg p-8 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-500 bg-gradient-to-r from-green-50 to-blue-50`}>
+        <header className={`rounded-lg p-6 sm:p-8 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-500 bg-gradient-to-r from-green-50 to-blue-50`}>
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">Bio-CNG Plant — Specialized in Food Waste</h1>
           <p className="mt-4 text-gray-700">The Bio-CNG Plant converts biodegradable and food waste into clean, renewable energy using advanced anaerobic digestion technology. The process involves aerobic pre-treatment followed by anaerobic methanation, resulting in high methane yield and nutrient-rich organic manure as a by-product.</p>
         </header>
@@ -51,7 +51,7 @@ export default function BioCNGPage() {
             <p className="mt-3 text-gray-700">Each ton of food waste processed prevents methane emissions, reduces waste disposal costs, and contributes to cleaner urban environments.</p>
           </section>
 
-          <section className="p-8 rounded-xl text-white text-center bg-gradient-to-r from-green-600 to-blue-600">
+          <section className="p-6 sm:p-8 rounded-xl text-white text-center bg-gradient-to-r from-green-600 to-blue-600">
             <h3 className="text-2xl font-bold">Interested in a Bio-CNG project?</h3>
             <div className="mt-4">
               <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-white text-green-700 rounded-md font-medium">Learn More / Contact Us</Link>

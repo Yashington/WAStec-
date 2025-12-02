@@ -126,7 +126,7 @@ const About = () => {
               <div key={project.id} className="flex flex-col rounded-xl shadow-lg overflow-hidden bg-white">
                 <div className="flex-shrink-0">
                   <div className="bg-gray-200 border-2 border-dashed w-full h-48 flex items-center justify-center">
-                    <img src={project.image || " "} alt={project.description} />
+                    <span className="text-gray-500">Project Image</span>
                   </div>
                 </div>
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -146,9 +146,9 @@ const About = () => {
                   </div>
                   <div className="mt-6 flex items-center">
                     <div className="flex-shrink-0">
-                      {/* <div className="bg-gray-200 border-2 border-dashed rounded-full w-10 h-10 flex items-center justify-center">
+                      <div className="bg-gray-200 border-2 border-dashed rounded-full w-10 h-10 flex items-center justify-center">
                         <span className="text-gray-500 text-xs">Icon</span>
-                      </div> */}
+                      </div>
                     </div>
                     <div className="ml-3">
                       <p className="text-sm font-medium text-gray-900">Capacity: {project.capacity}</p>
