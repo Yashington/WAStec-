@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom'
+import manav from "../assets/images/manav.jpeg"
+import biogas_plant from "../assets/images/biogas_analysis.jpg"
+import coconut from "../assets/images/coconut.jpg"
+import hotel_waste from "../assets/images/hotel_waste.png"
 
 const About = () => {
   // Project data to showcase
@@ -10,7 +14,8 @@ const About = () => {
       location: "Mumbai, Maharashtra",
       status: "Operational",
       feedstock: "Municipal organic waste",
-      capacity: "500 kg/day"
+      capacity: "500 kg/day",
+      image: biogas_plant
     },
     {
       id: 2,
@@ -19,7 +24,8 @@ const About = () => {
       location: "Kochi, Kerala",
       status: "Operational",
       feedstock: "Coconut waste",
-      capacity: "2 tons/day"
+      capacity: "2 tons/day",
+      image: coconut
     },
     {
       id: 3,
@@ -28,7 +34,8 @@ const About = () => {
       location: "Goa",
       status: "Under Development",
       feedstock: "Food waste, organic matter",
-      capacity: "1 ton/day"
+      capacity: "1 ton/day",
+      image: hotel_waste
     }
   ]
 
@@ -92,8 +99,8 @@ const About = () => {
               </div>
               
               <div className="flex justify-center">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
-                  <span className="text-gray-500">Founder's Photo / Company Image</span>
+                <div className="rounded-xl w-full h-96 flex items-center justify-center overflow-hidden ">
+                  <img src={manav} alt="Manav Kukreja" className="w-full h-full object-contain rounded-xl" />
                 </div>
               </div>
             </div>
@@ -119,7 +126,7 @@ const About = () => {
               <div key={project.id} className="flex flex-col rounded-xl shadow-lg overflow-hidden bg-white">
                 <div className="flex-shrink-0">
                   <div className="bg-gray-200 border-2 border-dashed w-full h-48 flex items-center justify-center">
-                    <span className="text-gray-500">Project Image</span>
+                    <img src={project.image || " "} alt={project.description} />
                   </div>
                 </div>
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -139,9 +146,9 @@ const About = () => {
                   </div>
                   <div className="mt-6 flex items-center">
                     <div className="flex-shrink-0">
-                      <div className="bg-gray-200 border-2 border-dashed rounded-full w-10 h-10 flex items-center justify-center">
+                      {/* <div className="bg-gray-200 border-2 border-dashed rounded-full w-10 h-10 flex items-center justify-center">
                         <span className="text-gray-500 text-xs">Icon</span>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="ml-3">
                       <p className="text-sm font-medium text-gray-900">Capacity: {project.capacity}</p>
@@ -200,8 +207,8 @@ const About = () => {
             <h3 className="text-2xl font-bold">Founder's Message</h3>
             <div className="mt-6 flex flex-col md:flex-row items-center">
               <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-32 h-32 flex items-center justify-center">
-                  <span className="text-gray-500">Founder Photo</span>
+                <div className="rounded-xl w-32 h-32 flex items-center justify-center overflow-hidden">
+                  <img src={manav} alt="Manav Kukreja" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div>
@@ -231,8 +238,8 @@ const About = () => {
           <div className="mt-12">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               <div className="bg-white rounded-lg p-6 text-center shadow-md">
-                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-full w-24 h-24 flex items-center justify-center">
-                  <span className="text-gray-500">Photo</span>
+                <div className="mx-auto rounded-full w-24 h-24 flex items-center justify-center overflow-hidden">
+                  <img src={manav} alt="Manav Kukreja" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-gray-900">Manav Kukreja</h3>
                 <p className="mt-2 text-green-600">Founder & CEO</p>
