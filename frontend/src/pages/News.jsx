@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import swachh_bharat from "../assets/images/swachh.jpg"
 
 const News = () => {
   const newsItems = [
@@ -238,8 +239,8 @@ const News = () => {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div className="bg-white bg-opacity-20 border-2 border-dashed border-white rounded-xl w-full h-48 sm:h-64 flex items-center justify-center">
-                    <span className="text-white text-sm">Swachh Bharat & Biogas Integration</span>
+                  <div className="bg-white bg-opacity-20  rounded-xl w-full h-64 flex items-center justify-center">
+                    <img src={swachh_bharat} alt="Swachh Bharat and Biogas Integration" className='rounded-xl'/>
                   </div>
                 </div>
               </div>

@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom'
-
+import visualization from "../assets/images/visualization.png"
+import research_paper from "../assets/images/research_paper.png"
+import process_optimization from "../assets/images/process_optimization.jpg"
+import biogas_analysis from "../assets/images/biogas_analysis.jpg"
+import product_development from "../assets/images/product_development.jpg"
+import tech_visualization from "../assets/images/tech_visualization.jpg"
 const Technology = () => {
   const processSteps = [
     {
@@ -132,8 +137,8 @@ const Technology = () => {
             </div>
             
             <div className="flex justify-center">
-              <div className="bg-white bg-opacity-20 border-2 border-dashed border-white rounded-xl w-full h-64 sm:h-80 md:h-96 flex items-center justify-center">
-                <span className="text-white">Nisargruna Technology Visualization</span>
+              <div className="bg-white bg-opacity-20 border border-white rounded-xl w-full h-96 flex items-center justify-center">
+                <img src={visualization} alt="Visualization" />
               </div>
             </div>
           </div>
@@ -190,8 +195,8 @@ const Technology = () => {
               </div>
               
               <div className="flex justify-center">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 sm:h-80 md:h-96 flex items-center justify-center">
-                  <span className="text-gray-500">Technology Visualization</span>
+                <div className="rounded-xl w-full h-96 flex items-center justify-center overflow-hidden">
+                  <img src={tech_visualization} alt="Technology Visualization" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
@@ -281,9 +286,9 @@ const Technology = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <div className="bg-white bg-opacity-20 rounded-lg p-4">
-                  <div className="bg-gray-200 border-2 border-dashed rounded w-32 h-24 sm:w-48 sm:h-32 flex items-center justify-center">
-                    <span className="text-gray-700 text-sm">Research Paper Cover</span>
+                <div className="bg-opacity-20 rounded-lg p-4">
+                  <div className=" rounded w-48 h-32 flex items-center justify-center">
+                    <img src={research_paper} alt="Research Paper" className='w-full'/>
                   </div>
                 </div>
               </div>
@@ -307,8 +312,8 @@ const Technology = () => {
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
-              <div className="bg-gray-200 border-2 border-dashed w-full h-48 flex items-center justify-center">
-                <span className="text-gray-500">Lab Photo 1</span>
+              <div className="w-full h-48 flex items-center justify-center overflow-hidden">
+                <img src={biogas_analysis} alt="Biogas Analysis Lab" className="w-full h-full object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-gray-900">Biogas Analysis Lab</h3>
@@ -319,8 +324,8 @@ const Technology = () => {
             </div>
             
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
-              <div className="bg-gray-200 border-2 border-dashed w-full h-48 flex items-center justify-center">
-                <span className="text-gray-500">Lab Photo 2</span>
+              <div className="w-full h-48 flex items-center justify-center overflow-hidden">
+                <img src={process_optimization} alt="Process Optimization" className="w-full h-full object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-gray-900">Process Optimization Lab</h3>
@@ -331,8 +336,8 @@ const Technology = () => {
             </div>
             
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
-              <div className="bg-gray-200 border-2 border-dashed w-full h-48 flex items-center justify-center">
-                <span className="text-gray-500">Lab Photo 3</span>
+              <div className="w-full h-48 flex items-center justify-center overflow-hidden">
+                <img src={product_development} alt="Product Development Lab" className="w-full h-full object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-gray-900">Product Development Lab</h3>

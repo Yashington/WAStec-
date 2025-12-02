@@ -1,4 +1,10 @@
 import { Link } from 'react-router-dom'
+import cng from "../assets/images/1st.png"
+import biomass_briquettes from "../assets/images/2nd.png"
+import carbon from "../assets/images/3rd.png"
+import compost from "../assets/images/4th.png"
+import coconut from "../assets/images/coconut.jpg"
+
 
 const Projects = () => {
   const projects = [
@@ -20,7 +26,7 @@ const Projects = () => {
       status: "Operational",
       feedstock: "Coconut waste",
       capacity: "2 tons/day",
-      image: "project2"
+      image: {coconut}
     },
     {
       id: 3,
@@ -187,32 +193,32 @@ const Projects = () => {
           <div className="mt-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">CNG</span>
+                <div className="mx-auto  border-2 rounded-xl w-24 h-24 flex items-center justify-center">
+                  <img src={cng} alt="CNG image" />
                 </div>
                 <h3 className="mt-4 text-lg font-medium text-gray-900">Compressed Natural Gas</h3>
                 <p className="mt-2 text-sm text-gray-500">Clean automotive fuel</p>
               </div>
               
               <div className="text-center">
-                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">Briquettes</span>
+                <div className="mx-auto border-2 rounded-xl w-24 h-24 flex items-center justify-center">
+                  <img src={biomass_briquettes} alt="Biomass briquttes" />
                 </div>
                 <h3 className="mt-4 text-lg font-medium text-gray-900">Biomass Briquettes</h3>
                 <p className="mt-2 text-sm text-gray-500">Clean cooking fuel</p>
               </div>
               
               <div className="text-center">
-                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">Compost</span>
+                <div className="mx-auto border-2 rounded-xl w-24 h-24 flex items-center justify-center">
+                  <img src={compost} alt="Compost image" />
                 </div>
                 <h3 className="mt-4 text-lg font-medium text-gray-900">Organic Compost</h3>
                 <p className="mt-2 text-sm text-gray-500">Nutrient-rich fertilizer</p>
               </div>
               
               <div className="text-center">
-                <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-xl w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">Carbon</span>
+                <div className="mx-auto border-2  rounded-xl w-24 h-24 flex items-center justify-center">
+                  <img src={carbon} alt="Biomass briquttes" />
                 </div>
                 <h3 className="mt-4 text-lg font-medium text-gray-900">Activated Carbon</h3>
                 <p className="mt-2 text-sm text-gray-500">Industrial adsorbent</p>
