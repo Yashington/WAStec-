@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import graph1 from "../assets/images/graph1.png";
 import graph2 from "../assets/images/graph2.png";
+import home1 from "../assets/images/home1.png";
+import home2 from "../assets/images/home2.png";
+import home3 from "../assets/images/home3.png";
 import wastechome from "../assets/images/wastechome.jpg";
+import ImageCarousel from "../components/ImageCarousel";
 
 const Home = () => {
   const [biogasOutput, setBiogasOutput] = useState(1250000);
@@ -88,18 +92,9 @@ const Home = () => {
             <div className="flex justify-center">
               <div className="relative w-full">
                 {/* IMAGE ADDED HERE */}
-          <svg
-            viewBox="0 0 100 100"
-            className="w-full h-64 sm:h-80 md:h-96 rounded-xl shadow-lg overflow-hidden"
-            preserveAspectRatio="none"
-          >
-            <image
-              href={wastechome}
-              width="100"
-              height="100"
-              preserveAspectRatio="xMidYMid slice"
-            />
-          </svg>
+                <ImageCarousel 
+                  images={[{ src: home1, alt: 'Waste Processing Facility' }, { src: home2, alt: 'New Plant Installation' }, { src: home3, alt: 'Hotel Waste Management' }]}
+                />
 
 
 
