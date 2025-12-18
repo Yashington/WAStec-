@@ -88,11 +88,21 @@ const Home = () => {
             <div className="flex justify-center">
               <div className="relative w-full">
                 {/* IMAGE ADDED HERE */}
-                <img
-                  src={wastechome}
-                  alt="Hero Visual"
-                  className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-lg"
-                />
+          <svg
+            viewBox="0 0 100 100"
+            className="w-full h-64 sm:h-80 md:h-96 rounded-xl shadow-lg overflow-hidden"
+            preserveAspectRatio="none"
+          >
+            <image
+              href={wastechome}
+              width="100"
+              height="100"
+              preserveAspectRatio="xMidYMid slice"
+            />
+          </svg>
+
+
+
 
                 {/* Biogas Counter Box */}
                 <div className="absolute -bottom-4 -right-4 bg-white p-3 sm:p-4 rounded-lg shadow-lg">

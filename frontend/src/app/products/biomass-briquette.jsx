@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import product2 from "../assets/images/product2.jpg";
+
 
 export default function BiomassBriquette() {
   return (
@@ -21,7 +23,11 @@ export default function BiomassBriquette() {
           <div className="flex justify-center">
             <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 w-full">
               <div className="bg-gray-100 rounded-md h-48 sm:h-64 flex items-center justify-center">
-                <span className="text-gray-500">Briquette Production Image</span>
+                                <img
+                                  src={product2}
+                                  alt="Biomass Briquette"
+                                  className="w-full h-full object-contain block"
+                                />
               </div>
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-3 bg-green-50 rounded-md">

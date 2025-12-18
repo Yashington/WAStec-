@@ -130,11 +130,18 @@ const About = () => {
 
               <div className="flex justify-center">
                 <div className="rounded-xl w-full h-96 flex items-center justify-center overflow-hidden ">
-                  <img
-                    src={manav}
-                    alt="Manav Kukreja"
-                    className="w-full h-full object-contain rounded-xl"
-                  />
+<svg
+  viewBox="0 0 100 100"
+  className="w-full h-full rounded-xl overflow-hidden"
+>
+  <image
+    href={manav}
+    width="100"
+    height="100"
+    preserveAspectRatio="xMidYMid meet"
+  />
+</svg>
+
                 </div>
               </div>
             </div>
@@ -271,11 +278,18 @@ const About = () => {
             <div className="mt-6 flex flex-col md:flex-row items-center">
               <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
                 <div className="rounded-xl w-32 h-32 flex items-center justify-center overflow-hidden">
-                  <img
-                    src={manav}
-                    alt="Manav Kukreja"
-                    className="w-full h-full object-cover"
-                  />
+<svg
+  viewBox="0 0 100 100"
+  className="w-full h-full"
+>
+  <image
+    href={manav}
+    width="100"
+    height="100"
+    preserveAspectRatio="xMidYMid slice"
+  />
+</svg>
+
                 </div>
               </div>
               <div>
@@ -314,11 +328,18 @@ const About = () => {
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               <div className="bg-white rounded-lg p-6 text-center shadow-md">
                 <div className="mx-auto rounded-full w-24 h-24 flex items-center justify-center overflow-hidden">
-                  <img
-                    src={manav}
-                    alt="Manav Kukreja"
-                    className="w-full h-full object-cover"
-                  />
+<svg
+  viewBox="0 0 100 100"
+  className="w-full h-full"
+>
+  <image
+    href={manav}
+    width="100"
+    height="100"
+    preserveAspectRatio="xMidYMid slice"
+  />
+</svg>
+
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-gray-900">
                   Manav Kukreja
@@ -332,11 +353,25 @@ const About = () => {
 
               <div className="bg-white rounded-lg p-6 text-center shadow-md">
                 <div className="mx-auto bg-gray-200 border-2 border-dashed rounded-full w-24 h-24 flex items-center justify-center">
-                  <img
-                    src={barclogo}
-                    alt="Barc Logo"
-                    className="w-full h-full object-cover rounded-full"
-                  />
+              <svg
+                viewBox="0 0 100 100"
+                className="w-full h-full rounded-full overflow-hidden"
+              >
+                <defs>
+                  <clipPath id="circleClip">
+                    <circle cx="50" cy="50" r="50" />
+                  </clipPath>
+                </defs>
+
+                <image
+                  href={barclogo}
+                  width="100"
+                  height="100"
+                  clipPath="url(#circleClip)"
+                  preserveAspectRatio="xMidYMid slice"
+                />
+              </svg>
+
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-gray-900">
                   BARC Research Team
@@ -350,11 +385,21 @@ const About = () => {
 
               <div className="bg-white rounded-lg p-6 text-center shadow-md">
                 <div className="mx-auto rounded-full w-24 h-24 flex items-center justify-center">
-                  <img
-                    src={operationteam}
-                    alt="Operations Team"
-                    className="w-full h-full object-contain rounded-xl"
-                  />
+<svg
+  viewBox="0 0 800 600"
+  className="w-full h-full rounded-xl"
+  preserveAspectRatio="xMidYMid meet"
+>
+  <image
+    href={operationteam}
+    x="0"
+    y="0"
+    width="800"
+    height="600"
+    preserveAspectRatio="xMidYMid meet"
+  />
+</svg>
+
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-gray-900">
                   Operations Team
@@ -486,11 +531,18 @@ const About = () => {
 
             <div className="flex justify-center">
               <div className=" border-dashed rounded-xl w-full h-96 flex items-center justify-center">
-                <img
-                  src={advinno}
-                  alt=""
-                  className="w-full h-full object-contain rounded-xl"
-                />
+<svg
+  viewBox="0 0 100 100"
+  className="w-full h-full rounded-xl overflow-hidden"
+>
+  <image
+    href={advinno}
+    width="100"
+    height="100"
+    preserveAspectRatio="xMidYMid meet"
+  />
+</svg>
+
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import product3 from '../assets/images/product3.jpg'
 export default function CoirProducts() {
   const items = [
     { title: 'Cocopeat', desc: 'High-quality cocopeat for potting mixes and soil amendment, excellent water retention.' },
@@ -26,6 +26,7 @@ export default function CoirProducts() {
                 <div className="bg-green-50 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <svg className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v4a1 1 0 001 1h3m10 0h3a1 1 0 001-1V7M5 21h14" />
+                    <img src={product3} alt="Coir Products" className="w-full h-full object-contain block" />
                   </svg>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">{it.title}</h3>

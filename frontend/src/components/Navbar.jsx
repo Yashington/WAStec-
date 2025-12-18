@@ -54,6 +54,16 @@ const Navbar = () => {
               Projects
             </a>
             <a 
+              href="/products" 
+              className={`px-3 py-2 rounded-md text-sm font-medium ${
+                isActive('/products') 
+                  ? 'text-green-600 bg-green-50' 
+                  : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
+              }`}
+            >
+              Products
+            </a>
+            <a 
               href="/technology" 
               className={`px-3 py-2 rounded-md text-sm font-medium ${
                 isActive('/technology') 
@@ -165,8 +175,9 @@ const Navbar = () => {
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 isActive('/products') 
                   ? 'text-green-600 bg-green-50' 
-                  : 'text-gray-700 hover:text-green-600'
+                  : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
               }`}
+              onClick={() => setIsMenuOpen(false)}
             >
               Products
             </a>

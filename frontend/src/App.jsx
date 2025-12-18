@@ -13,10 +13,8 @@ import Careers from './pages/Careers'
 import Contact from './pages/Contact' 
 // Products & Services (new)
 import ProductsIndex from './app/products/index'
-import PortableBiogasPlant from './app/products/portable-biogas-plant'
-import BiomassBriquette from './app/products/biomass-briquette'
-import CoirProducts from './app/products/coir-products'
-import OrganicBooster from './app/products/organic-booster'
+import ProductDetailPage from './app/products/[slug]'
+// Individual product pages are no longer needed since we're using the dynamic route
 import ServicesPage from './app/services/index'
 import ConsultancyDetails from './app/services/consultancy'
 import ZeroWastePage from './app/services/zero-waste'
@@ -41,10 +39,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/products" element={<ProductsIndex />} />
-            <Route path="/products/portable-biogas-plant" element={<PortableBiogasPlant />} />
-            <Route path="/products/biomass-briquette" element={<BiomassBriquette />} />
-            <Route path="/products/coir-products" element={<CoirProducts />} />
-            <Route path="/products/organic-booster" element={<OrganicBooster />} />
+            <Route path="/products/:slug" element={<ProductDetailPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/consultancy" element={<ConsultancyDetails />} />
             <Route path="/services/zero-waste" element={<ZeroWastePage />} />
