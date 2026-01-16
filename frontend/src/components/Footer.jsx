@@ -2,28 +2,34 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="bg-gradient-to-r from-blue-950 to-blue-950 text-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="col-span-1">
-            <h3 className="text-lg font-bold mb-4">kukreja's WAStec Bio-Gas Pvt Ltd.</h3>
-            <p className="text-gray-300 mb-4">
-              BARC-incubated startup specializing in biogas purification and waste upcycling.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <div className="flex items-center">
+              <div className="bg-white p-2 rounded-lg mr-3">
+                <img src="/logo.jpg" alt="WAStec Logo" className="h-10 w-auto" />
+              </div>
+              <h3 className="text-xl font-bold">WAStec Bio-Gas</h3>
+            </div>
+            <p className="text-green-100 text-sm">
+              BARC-incubated startup pioneering biogas purification and waste upcycling technologies for a sustainable future.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+            <div className="flex space-x-4 mt-4">
+              <a href="#" className="text-green-200 hover:text-white transition-colors duration-300">
                 <span className="sr-only">Facebook</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
                 </svg>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" className="text-green-200 hover:text-white transition-colors duration-300">
                 <span className="sr-only">LinkedIn</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="#" className="text-green-200 hover:text-white transition-colors duration-300">
                 <span className="sr-only">Twitter</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -32,50 +38,94 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="col-span-1">
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href='/' className="text-gray-300 hover:text-white">Home</a></li>
-              <li><a href="/about" className="text-gray-300 hover:text-white">About Us</a></li>
-              <li><a href="/projects" className="text-gray-300 hover:text-white">Projects</a></li>
-              <li><a href="/technology" className="text-gray-300 hover:text-white">Technology</a></li>
-              <li><a href="/impact" className="text-gray-300 hover:text-white">Impact</a></li>
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-bold text-white border-b-2 border-green-500 pb-2 inline-block">Quick Links</h3>
+            <ul className="space-y-3">
+              <li><a href='/' className="text-green-100 hover:text-white transition-colors duration-300 flex items-center"><span className="mr-2">•</span> Home</a></li>
+              <li><a href="/about" className="text-green-100 hover:text-white transition-colors duration-300 flex items-center"><span className="mr-2">•</span> About Us</a></li>
+              <li><a href="/projects" className="text-green-100 hover:text-white transition-colors duration-300 flex items-center"><span className="mr-2">•</span> Projects</a></li>
+              <li><a href="/products" className="text-green-100 hover:text-white transition-colors duration-300 flex items-center"><span className="mr-2">•</span> Products</a></li>
+              <li><a href="/technology" className="text-green-100 hover:text-white transition-colors duration-300 flex items-center"><span className="mr-2">•</span> Technology</a></li>
+              <li><a href="/impact" className="text-green-100 hover:text-white transition-colors duration-300 flex items-center"><span className="mr-2">•</span> Impact</a></li>
             </ul>
           </div>
           
-          <div className="col-span-1">
-            <h3 className="text-lg font-bold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li><a href="/news" className="text-gray-300 hover:text-white">News & Media</a></li>
-              <li><a href="/careers" className="text-gray-300 hover:text-white">Careers</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Blog</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Knowledge Hub</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Investor Relations</a></li>
+          {/* Resources */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-bold text-white border-b-2 border-green-500 pb-2 inline-block">Resources</h3>
+            <ul className="space-y-3">
+              <li><a href="/news" className="text-green-100 hover:text-white transition-colors duration-300 flex items-center"><span className="mr-2">•</span> News & Media</a></li>
+              <li><a href="/careers" className="text-green-100 hover:text-white transition-colors duration-300 flex items-center"><span className="mr-2">•</span> Careers</a></li>
+              <li><a href="#" className="text-green-100 hover:text-white transition-colors duration-300 flex items-center"><span className="mr-2">•</span> Blog</a></li>
+              <li><a href="#" className="text-green-100 hover:text-white transition-colors duration-300 flex items-center"><span className="mr-2">•</span> Knowledge Hub</a></li>
+              <li><a href="#" className="text-green-100 hover:text-white transition-colors duration-300 flex items-center"><span className="mr-2">•</span> Investor Relations</a></li>
             </ul>
           </div>
           
-          <div className="col-span-1">
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-            <address className="not-italic text-gray-300">
-              <p className="mb-2">AIC-BARC, 1st Flr, DAE Con,</p>
-              <p className="mb-2">Anushaktinagar, Mumbai, 400094</p>
-              <p className="mb-2">Email: <a href="mailto:wastec.biogas@gmail.com" className="hover:text-white">wastec.biogas@gmail.com</a></p>
-              <p>Phone: <a href="tel:+91 9136038843" className="hover:text-white">+91 9136038843</a></p>
+          {/* Contact & Newsletter */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-bold text-white border-b-2 border-green-500 pb-2 inline-block">Contact & Support</h3>
+            <address className="not-italic text-green-100 space-y-2">
+              <p className="flex items-start">
+                <svg className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                AIC-BARC, 1st Flr, DAE Con, Anushaktinagar, Mumbai, 400094
+              </p>
+              <p className="flex items-start">
+                <svg className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <a href="mailto:wastec.biogas@gmail.com" className="hover:text-white transition-colors duration-300">wastec.biogas@gmail.com</a>
+              </p>
+              <p className="flex items-start">
+                <svg className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <a href="tel:+91 9136038843" className="hover:text-white transition-colors duration-300">+91 9136038843</a>
+              </p>
             </address>
+            
+            <div className="mt-6">
+              <h4 className="text-md font-semibold text-white mb-3">Subscribe to our Newsletter</h4>
+              <form className="flex flex-col space-y-2">
+                <input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  className="px-3 py-2 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+                <button 
+                  type="submit" 
+                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md transition-colors duration-300 font-medium"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-          <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} kukreja's WAStec Bio-Gas Pvt Ltd. All rights reserved.
-          </p>
-          <p className="text-gray-400 mt-2 text-sm">
+        <div className="mt-12 pt-8 border-t border-green-600 text-center">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-green-200 mb-4 md:mb-0">
+              &copy; {new Date().getFullYear()} WAStec Bio-Gas Pvt Ltd. All rights reserved.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="/privacy" className="text-green-200 hover:text-white transition-colors duration-300 text-sm">Privacy Policy</a>
+              <a href="/terms" className="text-green-200 hover:text-white transition-colors duration-300 text-sm">Terms of Service</a>
+              <a href="/sitemap" className="text-green-200 hover:text-white transition-colors duration-300 text-sm">Sitemap</a>
+            </div>
+          </div>
+          <p className="text-green-300 mt-4 text-sm italic">
             "Turning Waste into Worth" | "Waste to Wealth. Science to Sustainability."
           </p>
-          <div className="mt-4">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
-              Powered by BARC Incubation
-            </span>
+          <div className="mt-4 inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-medium">
+            <svg className="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            Powered by BARC Incubation
           </div>
         </div>
       </div>
