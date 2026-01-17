@@ -118,9 +118,8 @@ const Contact = () => {
                 </svg>
               </div>
               <h3 className="mt-4 text-lg font-bold text-gray-900">Phone</h3>
-              <p className="mt-2 text-gray-600">+91-9876543210</p>
+              <p className="mt-2 text-gray-600">+91-9136038843</p>
               <p className="mt-1 text-gray-600">Mon-Fri from 9AM to 6PM</p>
-              <p className="mt-1 text-gray-600">+91-9876543211 (Support)</p>
             </div>
 
             <div className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-md border border-blue-100">
